@@ -1,0 +1,2991 @@
+<!-- ================= Navbar GOPAN (Versi Premium & Terstruktur) ================= -->
+<nav class="navbar navbar-expand-lg navbar-gopan fixed-top">
+  <div class="container-fluid px-3 px-lg-5 d-flex justify-content-between align-items-center">
+
+    <!-- Tombol Toggle (Mobile) -->
+    <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <i class="bi bi-list" style="font-size:2rem; color:#1b2a6f;"></i>
+    </button>
+
+    <!-- Brand GOPAN -->
+    <a class="navbar-brand d-flex align-items-center mx-auto mx-lg-0" href="#beranda">
+      <img src="<?php echo base_url('assets/img/logo-gopan.png'); ?>" 
+           alt="Logo GOPAN" 
+           class="brand-logo me-2">
+      <div class="brand-text-wrapper d-flex flex-column lh-1">
+        <span class="brand-text">GOPAN</span>
+        <small class="brand-subtext">Garda Peternak Ayam Nasional</small>
+      </div>
+    </a>
+
+    <!-- Navigasi Menu -->
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav align-items-lg-center gap-lg-3 text-center text-lg-start">
+        <li class="nav-item"><a class="nav-link active" href="#beranda">Beranda</a></li>
+        <li class="nav-item"><a class="nav-link" href="#tentang">Tentang</a></li>
+        <li class="nav-item"><a class="nav-link" href="#layanan">Layanan</a></li>
+        <li class="nav-item"><a class="nav-link" href="#testimoni">Testimoni</a></li>
+        <li class="nav-item"><a class="nav-link" href="#galeri">Galeri</a></li>
+        <li class="nav-item"><a class="nav-link" href="#artikel">Artikel</a></li>
+        <li class="nav-item"><a class="nav-link" href="#faq">FAQ</a></li>
+        <li class="nav-item"><a class="nav-link" href="#kontak">Kontak</a></li>
+      </ul>
+    </div>
+
+  </div>
+</nav>
+
+<style>
+/* ================= Struktur Dasar ================= */
+.navbar-gopan {
+  background: #ffffff;
+  box-shadow: 0 4px 18px rgba(0,0,0,0.06);
+  padding: 1rem 1.5rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  border-bottom: 3px solid rgba(255,215,0,0.2);
+  transition: all 0.4s ease;
+  z-index: 9999;
+}
+
+/* Efek Scroll */
+.navbar-gopan.scrolled {
+  background: rgba(255, 255, 255, 0.97);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 6px 25px rgba(0,0,0,0.08);
+  padding: 0.7rem 1.2rem;
+  border-bottom: 3px solid #facc15;
+  transition: all 0.3s ease;
+}
+
+/* ================= Brand ================= */
+.brand-logo {
+  height: 58px; width: 58px;
+  border-radius: 50%;
+  border: 2px solid #facc15;
+  background: #fff;
+  box-shadow: 0 4px 18px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.brand-logo:hover {
+  transform: rotate(5deg) scale(1.06);
+  box-shadow: 0 6px 20px rgba(255,215,0,0.4);
+}
+
+.brand-text {
+  font-family: "Playfair Display", serif;
+  font-size: 1.8rem;
+  font-weight: 900;
+  letter-spacing: 0.6px;
+  background: linear-gradient(45deg, #facc15, #ffde59);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.brand-subtext {
+  font-size: 0.75rem;
+  color: #1b2a6f;
+  font-weight: 600;
+  letter-spacing: 0.4px;
+  margin-top: 2px;
+  text-transform: uppercase;
+}
+
+/* ================= Navigasi ================= */
+.navbar-gopan .nav-link {
+  color: #1b2a6f;
+  font-weight: 600;
+  font-size: 1rem;
+  margin: 0 0.6rem;
+  position: relative;
+  transition: all 0.3s ease;
+  text-transform: capitalize;
+  padding-bottom: 6px;
+}
+
+.navbar-gopan .nav-link::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 3px;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(90deg, #facc15, #ffde59);
+  border-radius: 2px;
+  transition: width 0.3s ease;
+}
+.navbar-gopan .nav-link:hover::after,
+.navbar-gopan .nav-link.active::after {
+  width: 100%;
+}
+.navbar-gopan .nav-link:hover {
+  color: #facc15;
+  transform: translateY(-2px);
+}
+.navbar-gopan .nav-link.active {
+  color: #facc15;
+  font-weight: 700;
+}
+
+/* ================= Responsif ================= */
+@media (max-width: 992px) {
+  .navbar-gopan .collapse {
+    background: #ffffff;
+    margin-top: 0.75rem;
+    border-radius: 1rem;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    padding: 1.2rem;
+  }
+  .navbar-gopan .nav-link {
+    display: block;
+    padding: 0.7rem 0;
+    margin: 0;
+  }
+  .brand-logo { height: 50px; width: 50px; }
+  .brand-text { font-size: 1.6rem; }
+  .brand-subtext { font-size: 0.65rem; }
+}
+
+@media (max-width: 576px) {
+  .brand-logo { height: 42px; width: 42px; }
+  .brand-text { font-size: 1.3rem; }
+  .brand-subtext { font-size: 0.55rem; }
+  .navbar-gopan { padding: 0.8rem 1rem; }
+}
+</style>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const navbar = document.querySelector(".navbar-gopan");
+  const links = document.querySelectorAll(".nav-link");
+  const toggler = document.querySelector(".navbar-toggler");
+  const collapse = document.querySelector(".navbar-collapse");
+
+  // Efek scroll dinamis
+  const handleScroll = () => {
+    if (window.scrollY > 50) navbar.classList.add("scrolled");
+    else navbar.classList.remove("scrolled");
+  };
+  window.addEventListener("scroll", handleScroll);
+  handleScroll();
+
+  // Aktifkan link yang diklik
+  links.forEach(link => {
+    link.addEventListener("click", () => {
+      links.forEach(l => l.classList.remove("active"));
+      link.classList.add("active");
+
+      // Tutup menu di mobile
+      if (window.getComputedStyle(toggler).display !== "none") {
+        const bsCollapse = bootstrap.Collapse.getInstance(collapse) || new bootstrap.Collapse(collapse, { toggle: false });
+        bsCollapse.hide();
+      }
+    });
+  });
+
+  // Tutup menu jika klik di luar area navbar
+  document.addEventListener("click", e => {
+    if (window.getComputedStyle(toggler).display !== "none") {
+      if (!navbar.contains(e.target) && collapse.classList.contains("show")) {
+        const bsCollapse = bootstrap.Collapse.getInstance(collapse);
+        if (bsCollapse) bsCollapse.hide();
+      }
+    }
+  });
+});
+</script>
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><?php echo $title; ?></title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+
+</head>
+<body>
+
+
+<!-- ================= Hero Modern & Kuat GOPAN ================= -->
+<section id="beranda" class="hero d-flex align-items-center">
+  <div class="overlay"></div>
+  <div class="container position-relative">
+    <div class="row align-items-center justify-content-between">
+
+      <!-- Hero Text -->
+      <div class="col-lg-6 col-md-10 hero-text text-center text-lg-start">
+        <h1 class="fw-bold mb-4 animate-slide-in">
+          Selamat Datang di <span class="brand-highlight">GOPAN</span>
+        </h1>
+        <p class="lead mb-4 animate-fade-in">
+          <strong>Garda Organisasi Peternak Ayam Nasional</strong> — wadah perjuangan, kolaborasi, dan solusi digital
+          bagi peternak ayam Indonesia. Kami membangun industri perunggasan yang
+          <em>modern, efisien, transparan, dan berdaya saing global</em>.
+        </p>
+
+        <p class="fw-semibold text-warning mb-5 animate-fade-in">
+          <i class="bi bi-stars me-2"></i> "Bersatu, Berdaya, Sejahtera"
+        </p>
+
+        <!-- Quick Highlights -->
+        <div class="row g-4 mb-5 animate-slide-in-delay">
+          <div class="col-6 d-flex align-items-center">
+            <div class="icon-wrapper"><i class="bi bi-people-fill"></i></div>
+            <span>Jaringan Peternak Nasional</span>
+          </div>
+          <div class="col-6 d-flex align-items-center">
+            <div class="icon-wrapper"><i class="bi bi-shield-check"></i></div>
+            <span>Perjuangan Hak & Kesejahteraan</span>
+          </div>
+          <div class="col-6 d-flex align-items-center">
+            <div class="icon-wrapper"><i class="bi bi-cash-coin"></i></div>
+            <span>Transparansi Pasar & Harga</span>
+          </div>
+          <div class="col-6 d-flex align-items-center">
+            <div class="icon-wrapper"><i class="bi bi-lightbulb-fill"></i></div>
+            <span>Inovasi & Solusi Digital</span>
+          </div>
+        </div>
+
+        <!-- Hero Buttons -->
+        <div class="d-flex flex-wrap gap-3 justify-content-center justify-content-lg-start animate-slide-in-delay">
+          <a href="#layanan" class="btn btn-gradient btn-lg shadow-lg">
+            <i class="bi bi-lightning-charge-fill me-2"></i> Pelajari Layanan
+          </a>
+          <a href="#kontak" class="btn btn-outline-gradient btn-lg shadow-lg">
+            <i class="bi bi-send-fill me-2"></i> Bergabung Sekarang
+          </a>
+        </div>
+      </div>
+
+      <!-- Hero Image -->
+      <div class="col-lg-5 col-md-8 text-center mt-5 mt-lg-0 animate-fade-in-right">
+        <div class="hero-img-wrapper">
+          <img src="<?php echo base_url('assets/img/logo-gopan.png'); ?>" 
+               alt="Logo GOPAN" 
+               class="img-fluid hero-img shadow-lg rounded-circle p-3">
+        </div>
+        <div class="mt-4 text-white small animate-fade-in">
+          <i class="bi bi-patch-check-fill text-warning me-2"></i>
+          Didirikan untuk menyatukan suara peternak ayam Indonesia
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<style>
+/* ================= Hero Section ================= */
+.hero {
+  background: linear-gradient(135deg, #0f172a, #1e3a8a);
+  color: #fff;
+  min-height: 100vh;
+  padding: 7rem 1rem 5rem;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+
+.hero .overlay {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 25% 25%, rgba(255,215,0,0.15), transparent 70%),
+              radial-gradient(circle at 75% 75%, rgba(255,255,255,0.08), transparent 70%);
+  z-index: 1;
+}
+
+.hero .container {
+  position: relative;
+  z-index: 2;
+}
+
+/* ================= Heading ================= */
+.hero h1 {
+  font-size: 3rem;
+  line-height: 1.3;
+  font-weight: 800;
+  color: #fff;
+  text-shadow: 0 3px 15px rgba(0,0,0,0.4);
+}
+.hero h1 .brand-highlight {
+  background: linear-gradient(45deg, #facc15, #ffde59);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 900;
+}
+
+/* ================= Paragraph ================= */
+.hero p {
+  font-size: 1.2rem;
+  color: rgba(255,255,255,0.92);
+  max-width: 640px;
+  margin: 0 auto 1.5rem auto;
+}
+
+/* ================= Icon Box ================= */
+.icon-wrapper {
+  background: rgba(255,255,255,0.15);
+  border: 2px solid rgba(255,215,0,0.5);
+  color: #facc15;
+  font-size: 1.3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 45px;
+  width: 45px;
+  border-radius: 12px;
+  margin-right: 0.8rem;
+  transition: all 0.3s ease;
+}
+.icon-wrapper:hover {
+  background: rgba(255,215,0,0.25);
+  transform: scale(1.1);
+}
+
+/* ================= Buttons ================= */
+.btn {
+  padding: 0.9rem 2.5rem;
+  font-size: 1rem;
+  border-radius: 50px;
+  font-weight: 600;
+  transition: all 0.4s ease;
+}
+.btn-gradient {
+  background: linear-gradient(135deg, #facc15, #fcd34d);
+  border: none;
+  color: #0f172a;
+  letter-spacing: 0.3px;
+}
+.btn-gradient:hover {
+  background: linear-gradient(135deg, #ffde59, #facc15);
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 12px 28px rgba(250,204,21,0.45);
+}
+.btn-outline-gradient {
+  border: 2px solid #fff;
+  color: #fff;
+  background: transparent;
+}
+.btn-outline-gradient:hover {
+  background: #fff;
+  color: #0f172a;
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 12px 28px rgba(255,255,255,0.25);
+}
+
+/* ================= Hero Image ================= */
+.hero-img-wrapper {
+  position: relative;
+  display: inline-block;
+  margin-top: 1.5rem;
+}
+.hero-img-wrapper::before {
+  content: "";
+  position: absolute;
+  inset: -25px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(250,204,21,0.25), transparent 70%);
+  z-index: 0;
+  animation: pulse 4s infinite;
+}
+.hero-img {
+  max-width: 80%;
+  animation: float 5s ease-in-out infinite;
+  border-radius: 50%;
+  border: 6px solid rgba(255,255,255,0.8);
+  position: relative;
+  z-index: 1;
+  box-shadow: 0 25px 45px rgba(0,0,0,0.4);
+}
+
+/* ================= Animations ================= */
+@keyframes float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-15px); } }
+@keyframes pulse { 0%,100% { opacity:0.4; transform:scale(1); } 50% { opacity:0.7; transform:scale(1.1); } }
+.animate-slide-in { opacity:0; transform: translateY(40px); animation: slideIn 1s forwards; }
+.animate-slide-in-delay { opacity:0; transform: translateY(40px); animation: slideIn 1s 0.4s forwards; }
+.animate-fade-in { opacity:0; animation: fadeIn 1.2s 0.2s forwards; }
+.animate-fade-in-right { opacity:0; transform: translateX(40px); animation: fadeInRight 1s 0.6s forwards; }
+@keyframes slideIn { to { opacity:1; transform: translateY(0); } }
+@keyframes fadeIn { to { opacity:1; } }
+@keyframes fadeInRight { to { opacity:1; transform: translateX(0); } }
+
+/* ================= Responsive ================= */
+@media (max-width: 1200px) {
+  .hero h1 { font-size: 2.6rem; }
+  .hero p { font-size: 1.1rem; }
+}
+@media (max-width: 992px) {
+  .hero { text-align: center; padding: 6rem 1rem 4.5rem; }
+  .hero h1 { font-size: 2.3rem; }
+  .hero p { font-size: 1rem; }
+  .hero-img { max-width: 70%; margin-top: 2rem; }
+}
+@media (max-width: 576px) {
+  .hero { padding: 6rem 1rem 4rem; }
+  .hero h1 { font-size: 1.9rem; }
+  .hero p { font-size: 0.95rem; }
+  .btn { width: 100%; text-align: center; }
+}
+</style>
+
+
+
+
+
+
+
+
+<!-- ================= Tentang Modern GOPAN (Lengkap) ================= -->
+<section id="tentang" class="tentang-section py-5">
+  <div class="container">
+    <div class="row justify-content-center text-center">
+      <div class="col-lg-10 fade-in-up">
+
+        <!-- Judul -->
+        <h2 class="section-title mb-3">
+          Tentang <span class="highlight">GOPAN</span>
+        </h2>
+    
+
+        <!-- Deskripsi -->
+        <p class="lead tentang-text mb-5">
+          <strong>GOPAN (Garda Organisasi Peternak Ayam Nasional)</strong> adalah wadah perjuangan dan kolaborasi
+          bagi peternak ayam Indonesia.  
+          GOPAN hadir untuk menghimpun, melindungi, dan memberdayakan peternak melalui pendekatan 
+          <span class="text-gradient">digitalisasi</span>, 
+          <span class="text-gradient">pendidikan</span>, 
+          <span class="text-gradient">advokasi</span>, dan 
+          <span class="text-gradient">jejaring nasional</span>.  
+          Dengan semangat kebersamaan, GOPAN bertujuan menciptakan industri peternakan ayam yang 
+          <strong>sejahtera, modern, transparan, dan berdaya saing global</strong>.
+        </p>
+
+        <!-- Visi & Misi -->
+        <div class="row text-start justify-content-center g-4 mb-5">
+          <div class="col-md-5 fade-in-up">
+            <div class="p-4 bg-white shadow card-box h-100">
+              <h4 class="fw-bold text-primary mb-3">
+                <i class="bi bi-eye-fill text-warning me-2"></i> Visi
+              </h4>
+              <p class="mb-0">
+                Menjadi organisasi nasional yang mampu menyatukan, menguatkan, dan mensejahterakan
+                peternak ayam Indonesia melalui solidaritas, inovasi, serta kemandirian ekonomi.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-5 fade-in-up">
+            <div class="p-4 bg-white shadow card-box h-100">
+              <h4 class="fw-bold text-primary mb-3">
+                <i class="bi bi-bullseye text-warning me-2"></i> Misi
+              </h4>
+              <ul class="list-unstyled mb-0">
+                <li><i class="bi bi-check-circle-fill text-success me-2"></i> Melindungi dan memperjuangkan hak peternak ayam.</li>
+                <li><i class="bi bi-check-circle-fill text-success me-2"></i> Membangun sistem informasi & pasar yang transparan.</li>
+                <li><i class="bi bi-check-circle-fill text-success me-2"></i> Meningkatkan kapasitas peternak melalui edukasi & pelatihan.</li>
+                <li><i class="bi bi-check-circle-fill text-success me-2"></i> Mendorong inovasi teknologi & digitalisasi peternakan.</li>
+                <li><i class="bi bi-check-circle-fill text-success me-2"></i> Memperkuat jejaring dan solidaritas antar peternak.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Nilai Utama -->
+        <div class="row g-4 justify-content-center mb-5">
+          <div class="col-md-3 col-sm-6 fade-in-up">
+            <div class="p-4 bg-white shadow card-box h-100 text-center">
+              <i class="bi bi-people-fill fs-2 text-warning mb-3"></i>
+              <h5 class="fw-bold">Solidaritas</h5>
+              <p class="small text-muted mb-0">Mengutamakan kebersamaan dan kekuatan kolektif peternak.</p>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-6 fade-in-up">
+            <div class="p-4 bg-white shadow card-box h-100 text-center">
+              <i class="bi bi-lightbulb-fill fs-2 text-warning mb-3"></i>
+              <h5 class="fw-bold">Inovasi</h5>
+              <p class="small text-muted mb-0">Mengadopsi teknologi modern untuk solusi peternakan yang berkelanjutan.</p>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-6 fade-in-up">
+            <div class="p-4 bg-white shadow card-box h-100 text-center">
+              <i class="bi bi-shield-lock-fill fs-2 text-warning mb-3"></i>
+              <h5 class="fw-bold">Transparansi</h5>
+              <p class="small text-muted mb-0">Membangun sistem informasi & pasar yang jujur dan dapat dipercaya.</p>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-6 fade-in-up">
+            <div class="p-4 bg-white shadow card-box h-100 text-center">
+              <i class="bi bi-graph-up-arrow fs-2 text-warning mb-3"></i>
+              <h5 class="fw-bold">Kesejahteraan</h5>
+              <p class="small text-muted mb-0">Fokus pada peningkatan pendapatan & kehidupan peternak ayam Indonesia.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- CTA Button -->
+        <div class="mt-4 fade-in-up">
+          <button type="button" class="btn btn-gradient px-5 py-3 shadow-lg rounded-pill" data-bs-toggle="modal" data-bs-target="#fiturModal">
+            Jelajahi Fitur GOPAN
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+/* ================= Tentang Section ================= */
+.tentang-section {
+  background: #f9fafb;
+  position: relative;
+  padding: 5rem 1rem;
+}
+
+/* Judul */
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #0f172a;
+}
+.section-title .highlight {
+  background: linear-gradient(45deg, #facc15, #fcd34d);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.section-divider {
+  width: 80px;
+  height: 4px;
+  border-radius: 2px;
+  background: linear-gradient(90deg, #facc15, #fcd34d);
+}
+
+/* Paragraf */
+.tentang-text {
+  font-size: 1.15rem;
+  line-height: 1.8;
+  color: #374151;
+  max-width: 850px;
+  margin: 0 auto;
+}
+.text-gradient {
+  background: linear-gradient(45deg, #2563eb, #1d4ed8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 600;
+}
+
+/* Card / Box */
+.card-box {
+  border-radius: 1rem;
+  transition: all 0.3s ease;
+}
+.card-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+/* Tombol CTA */
+.btn-gradient {
+  background: linear-gradient(45deg, #2563eb, #1d4ed8);
+  color: #fff;
+  font-weight: 600;
+  transition: 0.3s;
+}
+.btn-gradient:hover {
+  opacity: 0.9;
+  transform: scale(1.05);
+}
+
+/* Animasi */
+.fade-in-up {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 1s forwards;
+}
+@keyframes fadeInUp {
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsif */
+@media (max-width: 992px) {
+  .section-title { font-size: 2rem; }
+  .tentang-text { font-size: 1rem; }
+}
+@media (max-width: 576px) {
+  .section-title { font-size: 1.7rem; }
+  .tentang-text { font-size: 0.95rem; }
+}
+</style>
+
+
+<!-- ================= Modal Fitur GOPAN (Lengkap) ================= -->
+<div class="modal fade" id="fiturModal" tabindex="-1" aria-labelledby="fiturModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content rounded-4 border-0 shadow-xl overflow-hidden">
+
+      <!-- Header Modal -->
+      <div class="modal-header bg-gradient-primary text-white py-4">
+        <h5 class="modal-title fw-bold d-flex align-items-center gap-2" id="fiturModalLabel">
+          <i class="bi bi-stars fs-4"></i> Fitur Unggulan GOPAN
+        </h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Tutup"></button>
+      </div>
+
+      <!-- Body Modal -->
+      <div class="modal-body py-5 bg-light-gradient">
+        <div class="row g-4">
+
+          <!-- Monitoring Kandang -->
+          <div class="col-12 col-sm-6 col-lg-4">
+            <div class="card fitur-card h-100 text-center p-4">
+              <div class="image-wrapper mx-auto mb-3">
+                <img src="<?php echo base_url('assets/img/monitoring.png'); ?>" alt="Monitoring">
+              </div>
+              <h5 class="fw-semibold mb-2 text-gradient">Monitoring Kandang</h5>
+              <p class="text-muted small">Pantau suhu, kelembaban, dan kesehatan ayam secara digital. Laporan harian, grafik, dan peringatan otomatis memudahkan peternak.</p>
+            </div>
+          </div>
+
+          <!-- Manajemen Pakan -->
+          <div class="col-12 col-sm-6 col-lg-4">
+            <div class="card fitur-card h-100 text-center p-4">
+              <div class="image-wrapper mx-auto mb-3">
+                <img src="<?php echo base_url('assets/img/pakan.png'); ?>" alt="Pakan">
+              </div>
+              <h5 class="fw-semibold mb-2 text-gradient">Manajemen Pakan</h5>
+              <p class="text-muted small">Optimalkan pemberian pakan dengan perhitungan otomatis. Catat stok, biaya, dan jadwal distribusi agar lebih hemat dan efisien.</p>
+            </div>
+          </div>
+
+          <!-- Komunitas Peternak -->
+          <div class="col-12 col-sm-6 col-lg-4">
+            <div class="card fitur-card h-100 text-center p-4">
+              <div class="image-wrapper mx-auto mb-3">
+                <img src="<?php echo base_url('assets/img/komunitas.png'); ?>" alt="Komunitas">
+              </div>
+              <h5 class="fw-semibold mb-2 text-gradient">Komunitas Peternak</h5>
+              <p class="text-muted small">Jaringan solidaritas antar peternak se-Indonesia. Berbagi pengalaman, solusi praktis, dan dukungan kolektif menghadapi tantangan industri.</p>
+            </div>
+          </div>
+
+          <!-- Edukasi -->
+          <div class="col-12 col-sm-6 col-lg-4">
+            <div class="card fitur-card h-100 text-center p-4">
+              <div class="image-wrapper mx-auto mb-3">
+                <img src="<?php echo base_url('assets/img/edukasi.png'); ?>" alt="Edukasi">
+              </div>
+              <h5 class="fw-semibold mb-2 text-gradient">Edukasi & Pelatihan</h5>
+              <p class="text-muted small">Materi pelatihan, video tutorial, seminar, dan artikel seputar kesehatan ayam, manajemen usaha, hingga pemasaran modern.</p>
+            </div>
+          </div>
+
+          <!-- Informasi Pasar -->
+          <div class="col-12 col-sm-6 col-lg-4">
+            <div class="card fitur-card h-100 text-center p-4">
+              <div class="image-wrapper mx-auto mb-3">
+                <img src="<?php echo base_url('assets/img/pasar.png'); ?>" alt="Pasar">
+              </div>
+              <h5 class="fw-semibold mb-2 text-gradient">Informasi Pasar</h5>
+              <p class="text-muted small">Akses update harga ayam & pakan, tren industri, dan analisis pasar harian untuk membantu keputusan bisnis lebih tepat.</p>
+            </div>
+          </div>
+
+          <!-- Advokasi Peternak -->
+          <div class="col-12 col-sm-6 col-lg-4">
+            <div class="card fitur-card h-100 text-center p-4">
+              <div class="image-wrapper mx-auto mb-3">
+                <img src="<?php echo base_url('assets/img/advokasi.png'); ?>" alt="Advokasi">
+              </div>
+              <h5 class="fw-semibold mb-2 text-gradient">Advokasi & Perlindungan</h5>
+              <p class="text-muted small">Mendampingi peternak dalam kebijakan pemerintah, regulasi harga, perlindungan hukum, dan akses dukungan resmi.</p>
+            </div>
+          </div>
+
+          <!-- Digitalisasi -->
+          <div class="col-12 col-sm-6 col-lg-6">
+            <div class="card fitur-card h-100 text-center p-4">
+              <div class="image-wrapper mx-auto mb-3">
+                <img src="<?php echo base_url('assets/img/digital.png'); ?>" alt="Digitalisasi">
+              </div>
+              <h5 class="fw-semibold mb-2 text-gradient">Transformasi Digital</h5>
+              <p class="text-muted small">Sistem digitalisasi peternakan: pencatatan produksi, keuangan, hingga integrasi dengan aplikasi mobile berbasis data real-time.</p>
+            </div>
+          </div>
+
+          <!-- Dukungan Finansial -->
+          <div class="col-12 col-sm-6 col-lg-6">
+            <div class="card fitur-card h-100 text-center p-4">
+              <div class="image-wrapper mx-auto mb-3">
+                <img src="<?php echo base_url('assets/img/finansial.png'); ?>" alt="Finansial">
+              </div>
+              <h5 class="fw-semibold mb-2 text-gradient">Akses Pendanaan</h5>
+              <p class="text-muted small">Membuka jalan akses modal, kredit usaha, dan kemitraan dengan lembaga keuangan untuk memperkuat ekonomi peternak.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Footer Modal -->
+      <div class="modal-footer justify-content-center bg-light py-4">
+        <button type="button" class="btn btn-glow px-5 py-2 rounded-pill" data-bs-dismiss="modal">
+          Tutup
+        </button>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<style>
+/* Gradient Header */
+.bg-gradient-primary {
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+}
+
+/* Background Body Modal */
+.bg-light-gradient {
+  background: linear-gradient(135deg, #f9fafe, #eef2ff);
+}
+
+/* Card Elegan */
+.fitur-card {
+  border: 1px solid rgba(255,255,255,0.3);
+  border-radius: 1.2rem;
+  background: rgba(255,255,255,0.9);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+  transition: all 0.4s ease;
+}
+.fitur-card:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 16px 40px rgba(106,17,203,0.25);
+}
+
+/* Image lebih besar */
+.image-wrapper img {
+  width: 150px;
+  max-width: 100%;
+  height: auto;
+  transition: transform 0.4s ease, filter 0.3s ease;
+}
+.image-wrapper img:hover {
+  transform: scale(1.15);
+  filter: drop-shadow(0 6px 12px rgba(0,0,0,0.25));
+}
+
+/* Judul Fitur dengan Gradient */
+.text-gradient {
+  background: linear-gradient(45deg, #6a11cb, #2575fc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Tombol Glow Elegan */
+.btn-glow {
+  background: linear-gradient(45deg, #6a11cb, #2575fc);
+  color: #fff;
+  font-weight: 600;
+  border: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 16px rgba(106,17,203,0.4);
+}
+.btn-glow:hover {
+  box-shadow: 0 8px 24px rgba(37,117,252,0.6);
+  transform: translateY(-3px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .image-wrapper img { width: 110px; }
+  .fitur-card h5 { font-size: 1rem; }
+  .fitur-card p { font-size: 0.85rem; }
+}
+</style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- ================= Statistik Modern GOPAN (Lengkap) ================= -->
+<section id="statistik" class="statistik-section py-5">
+  <div class="container">
+
+    <!-- Judul -->
+    <div class="row justify-content-center text-center mb-5">
+      <div class="col-lg-9">
+        <h2 class="section-title mb-3">Statistik <span class="highlight">GOPAN</span></h2>
+        <p class="section-sub">
+          Data berikut mencerminkan <strong>pertumbuhan</strong>, 
+          <strong>dukungan</strong>, dan <strong>kontribusi nyata</strong> GOPAN 
+          dalam membangun komunitas peternak ayam nasional yang lebih 
+          <em>maju, solid, dan sejahtera</em>.
+        </p>
+      </div>
+    </div>
+
+    <!-- Statistik Box -->
+    <div class="row text-center g-4">
+
+      <!-- Wilayah Tercover -->
+      <div class="col-6 col-md-3 fade-up">
+        <div class="stat-box p-4 shadow-sm rounded-4 bg-white h-100">
+          <i class="bi bi-geo-alt-fill fs-1 gradient-icon mb-3"></i>
+          <h3 class="counter" data-target="34">0</h3>
+          <p>Provinsi Tercover</p>
+        </div>
+      </div>
+
+      <!-- Peternak Bergabung -->
+      <div class="col-6 col-md-3 fade-up">
+        <div class="stat-box p-4 shadow-sm rounded-4 bg-white h-100">
+          <i class="bi bi-people-fill fs-1 gradient-icon mb-3"></i>
+          <h3 class="counter" data-target="15000">0</h3>
+          <p>Peternak Bergabung</p>
+        </div>
+      </div>
+
+      <!-- Produksi Ayam -->
+      <div class="col-6 col-md-3 fade-up">
+        <div class="stat-box p-4 shadow-sm rounded-4 bg-white h-100">
+          <i class="bi bi-egg-fill fs-1 gradient-icon mb-3"></i>
+          <h3 class="counter" data-target="2500000">0</h3>
+          <p>Produksi Ayam / Bulan</p>
+        </div>
+      </div>
+
+      <!-- Kepuasan Anggota -->
+      <div class="col-6 col-md-3 fade-up">
+        <div class="stat-box p-4 shadow-sm rounded-4 bg-white h-100">
+          <i class="bi bi-emoji-heart-eyes fs-1 gradient-icon mb-3"></i>
+          <h3 class="counter" data-target="97">0</h3>
+          <p>Kepuasan Anggota (%)</p>
+        </div>
+      </div>
+
+      <!-- Pelatihan & Edukasi -->
+      <div class="col-6 col-md-3 fade-up">
+        <div class="stat-box p-4 shadow-sm rounded-4 bg-white h-100">
+          <i class="bi bi-mortarboard-fill fs-1 gradient-icon mb-3"></i>
+          <h3 class="counter" data-target="120">0</h3>
+          <p>Pelatihan & Edukasi</p>
+        </div>
+      </div>
+
+      <!-- Forum & Komunitas -->
+      <div class="col-6 col-md-3 fade-up">
+        <div class="stat-box p-4 shadow-sm rounded-4 bg-white h-100">
+          <i class="bi bi-chat-dots-fill fs-1 gradient-icon mb-3"></i>
+          <h3 class="counter" data-target="80">0</h3>
+          <p>Forum Komunitas Aktif</p>
+        </div>
+      </div>
+
+      <!-- Kemitraan & Pendanaan -->
+      <div class="col-6 col-md-3 fade-up">
+        <div class="stat-box p-4 shadow-sm rounded-4 bg-white h-100">
+          <i class="bi bi-bank2 fs-1 gradient-icon mb-3"></i>
+          <h3 class="counter" data-target="50">0</h3>
+          <p>Kemitraan & Pendanaan</p>
+        </div>
+      </div>
+
+      <!-- Event & Seminar -->
+      <div class="col-6 col-md-3 fade-up">
+        <div class="stat-box p-4 shadow-sm rounded-4 bg-white h-100">
+          <i class="bi bi-calendar-event-fill fs-1 gradient-icon mb-3"></i>
+          <h3 class="counter" data-target="200">0</h3>
+          <p>Event & Seminar</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<style>
+/* ================= Statistik Section ================= */
+.statistik-section {
+  background: linear-gradient(180deg, #f9fafe 0%, #eef2ff 100%);
+  border-radius: 0 0 80px 80px;
+  box-shadow: inset 0 0 50px rgba(0,0,0,0.03);
+  text-align: center;
+  padding: 6rem 1rem;
+  position: relative;
+}
+
+/* Title */
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  background: linear-gradient(45deg, #6a11cb, #2575fc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.section-sub {
+  font-size: 1.05rem;
+  color: #34495e;
+  opacity: 0.85;
+  max-width: 650px;
+  margin: 1rem auto 0;
+  line-height: 1.8;
+}
+
+/* Stat Box */
+.stat-box {
+  transition: all 0.4s ease;
+  border: 1px solid rgba(0,0,0,0.05);
+}
+.stat-box:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 35px rgba(0,0,0,0.08);
+}
+
+/* Icon */
+.gradient-icon {
+  background: linear-gradient(45deg, #6a11cb, #2575fc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: transform 0.4s ease, text-shadow 0.4s ease;
+}
+.stat-box:hover .gradient-icon {
+  transform: scale(1.2);
+  text-shadow: 0 5px 15px rgba(106,17,203,0.4);
+}
+
+/* Angka */
+.counter {
+  font-size: 2.4rem;
+  font-weight: 800;
+  background: linear-gradient(45deg, #6a11cb, #2575fc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 8px;
+}
+
+/* Animasi Fade Up */
+.fade-up {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeUp 1s forwards;
+}
+@keyframes fadeUp {
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Highlight */
+.highlight {
+  background: linear-gradient(45deg, #facc15, #fcd34d);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 800;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .section-title { font-size: 2.2rem; }
+  .counter { font-size: 2rem; }
+}
+@media (max-width: 576px) {
+  .section-title { font-size: 1.8rem; }
+  .counter { font-size: 1.6rem; }
+}
+</style>
+
+<!-- Counter Animation JS -->
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const counters = document.querySelectorAll(".counter");
+  counters.forEach(counter => {
+    const target = +counter.getAttribute("data-target");
+    let current = 0;
+    const step = target / 120; // semakin besar, semakin cepat
+    const updateCounter = () => {
+      current += step;
+      if (current < target) {
+        counter.innerText = Math.ceil(current).toLocaleString();
+        requestAnimationFrame(updateCounter);
+      } else {
+        counter.innerText = target.toLocaleString();
+      }
+    };
+    updateCounter();
+  });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Layanan Modern GOPAN (Versi Profesional Lengkap) -->
+<section id="layanan" class="layanan-section py-5">
+  <div class="container text-center">
+    
+    <!-- Judul -->
+    <h2 class="section-title mb-3">Layanan <span class="highlight">GOPAN</span></h2>
+    <p class="section-sub mb-5">
+      GOPAN hadir sebagai <strong>Gerakan Organisasi Peternak Ayam Nasional</strong> 
+      untuk mendukung peternak Indonesia menjadi lebih <strong>modern, efisien, berdaya saing, dan berkelanjutan</strong>.
+      Kami menyediakan berbagai layanan yang dirancang untuk meningkatkan kesejahteraan peternak ayam.
+    </p>
+
+    <!-- Grid Layanan -->
+    <div class="row g-4 justify-content-center">
+
+      <!-- Pendampingan -->
+      <div class="col-12 col-md-6 col-lg-4 fade-up delay-1">
+        <div class="service-card p-4 shadow-sm rounded-4 h-100">
+          <div class="icon-circle mx-auto mb-3">
+            <i class="bi bi-hand-thumbs-up-fill fs-2 gradient-icon"></i>
+          </div>
+          <h5 class="fw-semibold mb-2">Pendampingan Peternak</h5>
+          <p class="text-muted small">
+            Pembinaan, konsultasi, dan mentoring langsung agar peternak mampu menghadapi tantangan usaha serta meningkatkan produktivitas.
+          </p>
+        </div>
+      </div>
+
+      <!-- Edukasi -->
+      <div class="col-12 col-md-6 col-lg-4 fade-up delay-2">
+        <div class="service-card p-4 shadow-sm rounded-4 h-100">
+          <div class="icon-circle mx-auto mb-3">
+            <i class="bi bi-journal-text fs-2 gradient-icon"></i>
+          </div>
+          <h5 class="fw-semibold mb-2">Edukasi & Pelatihan</h5>
+          <p class="text-muted small">
+            Seminar, workshop, dan pelatihan berbasis ilmu terbaru dalam manajemen ternak, kesehatan ayam, serta strategi bisnis unggas.
+          </p>
+        </div>
+      </div>
+
+      <!-- Pasar -->
+      <div class="col-12 col-md-6 col-lg-4 fade-up delay-3">
+        <div class="service-card p-4 shadow-sm rounded-4 h-100">
+          <div class="icon-circle mx-auto mb-3">
+            <i class="bi bi-cart-check-fill fs-2 gradient-icon"></i>
+          </div>
+          <h5 class="fw-semibold mb-2">Akses Pasar</h5>
+          <p class="text-muted small">
+            Fasilitasi jaringan pemasaran yang adil, transparan, dan kompetitif untuk membantu peternak menjangkau pasar lebih luas.
+          </p>
+        </div>
+      </div>
+
+      <!-- Advokasi -->
+      <div class="col-12 col-md-6 col-lg-4 fade-up delay-4">
+        <div class="service-card p-4 shadow-sm rounded-4 h-100">
+          <div class="icon-circle mx-auto mb-3">
+            <i class="bi bi-megaphone-fill fs-2 gradient-icon"></i>
+          </div>
+          <h5 class="fw-semibold mb-2">Advokasi & Kebijakan</h5>
+          <p class="text-muted small">
+            Memperjuangkan kepentingan peternak melalui kebijakan pemerintah, perlindungan regulasi, dan keberpihakan ekonomi.
+          </p>
+        </div>
+      </div>
+
+      <!-- Teknologi -->
+      <div class="col-12 col-md-6 col-lg-4 fade-up delay-5">
+        <div class="service-card p-4 shadow-sm rounded-4 h-100">
+          <div class="icon-circle mx-auto mb-3">
+            <i class="bi bi-cpu-fill fs-2 gradient-icon"></i>
+          </div>
+          <h5 class="fw-semibold mb-2">Teknologi & Digitalisasi</h5>
+          <p class="text-muted small">
+            Pemanfaatan teknologi digital untuk monitoring kandang, efisiensi produksi, dan manajemen peternakan modern.
+          </p>
+        </div>
+      </div>
+
+      <!-- Riset & Inovasi -->
+      <div class="col-12 col-md-6 col-lg-4 fade-up delay-6">
+        <div class="service-card p-4 shadow-sm rounded-4 h-100">
+          <div class="icon-circle mx-auto mb-3">
+            <i class="bi bi-lightbulb-fill fs-2 gradient-icon"></i>
+          </div>
+          <h5 class="fw-semibold mb-2">Riset & Inovasi</h5>
+          <p class="text-muted small">
+            Mengembangkan inovasi pakan, manajemen kesehatan, serta sistem kandang modern berbasis penelitian.
+          </p>
+        </div>
+      </div>
+
+      <!-- Kemitraan -->
+      <div class="col-12 col-md-6 col-lg-4 fade-up delay-7">
+        <div class="service-card p-4 shadow-sm rounded-4 h-100">
+          <div class="icon-circle mx-auto mb-3">
+            <i class="bi bi-people-fill fs-2 gradient-icon"></i>
+          </div>
+          <h5 class="fw-semibold mb-2">Kemitraan Strategis</h5>
+          <p class="text-muted small">
+            Berkolaborasi dengan pemerintah, akademisi, dan swasta untuk memperkuat ekosistem peternakan nasional.
+          </p>
+        </div>
+      </div>
+
+      <!-- Pembiayaan -->
+      <div class="col-12 col-md-6 col-lg-4 fade-up delay-8">
+        <div class="service-card p-4 shadow-sm rounded-4 h-100">
+          <div class="icon-circle mx-auto mb-3">
+            <i class="bi bi-cash-coin fs-2 gradient-icon"></i>
+          </div>
+          <h5 class="fw-semibold mb-2">Pembiayaan & Usaha</h5>
+          <p class="text-muted small">
+            Membuka akses pembiayaan, permodalan, dan dukungan usaha agar peternak dapat berkembang lebih cepat.
+          </p>
+        </div>
+      </div>
+
+      <!-- Keberlanjutan -->
+      <div class="col-12 col-md-6 col-lg-4 fade-up delay-9">
+        <div class="service-card p-4 shadow-sm rounded-4 h-100">
+          <div class="icon-circle mx-auto mb-3">
+            <i class="bi bi-tree-fill fs-2 gradient-icon"></i>
+          </div>
+          <h5 class="fw-semibold mb-2">Keberlanjutan & Lingkungan</h5>
+          <p class="text-muted small">
+            Mendukung praktik peternakan ramah lingkungan, pengelolaan limbah, dan keberlanjutan ekosistem perunggasan.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Custom CSS -->
+<style>
+/* Section */
+.layanan-section {
+  background: linear-gradient(180deg, #eef2ff 0%, #f9fafe 100%);
+  padding: 6rem 1rem;
+  border-radius: 0 0 80px 80px;
+  box-shadow: inset 0 0 40px rgba(0,0,0,0.03);
+}
+
+/* Divider */
+.section-divider {
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, #6a11cb, #2575fc);
+  border-radius: 2px;
+  margin: 0 auto;
+}
+
+/* Title */
+.section-title {
+  font-size: 2.4rem;
+  font-weight: 800;
+  background: linear-gradient(45deg, #6a11cb, #2575fc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.section-sub {
+  font-size: 1.05rem;
+  color: #34495e;
+  opacity: 0.85;
+  max-width: 650px;
+  margin: 0 auto 3rem;
+  line-height: 1.6;
+}
+
+/* Service Card */
+.service-card {
+  background: #fff;
+  border: 1px solid #f0f0f0;
+  transition: all 0.35s ease;
+}
+.service-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+}
+
+/* Icon Circle */
+.icon-circle {
+  width: 70px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: rgba(106,17,203,0.08);
+  transition: all 0.35s ease;
+}
+.service-card:hover .icon-circle {
+  background: rgba(106,17,203,0.18);
+}
+.gradient-icon {
+  background: linear-gradient(45deg, #6a11cb, #2575fc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: transform 0.35s ease;
+}
+.service-card:hover .gradient-icon {
+  transform: scale(1.2);
+}
+
+/* Fade Up + Delay */
+.fade-up {
+  opacity: 0;
+  transform: translateY(25px);
+  animation: fadeUp 0.9s forwards;
+}
+.delay-1 { animation-delay: 0.1s; }
+.delay-2 { animation-delay: 0.3s; }
+.delay-3 { animation-delay: 0.5s; }
+.delay-4 { animation-delay: 0.7s; }
+.delay-5 { animation-delay: 0.9s; }
+
+@keyframes fadeUp {
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Highlight */
+.highlight {
+  background: linear-gradient(45deg, #facc15, #fcd34d);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 800;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .section-title { font-size: 2rem; }
+}
+@media (max-width: 576px) {
+  .section-title { font-size: 1.8rem; }
+}
+</style>
+
+
+
+
+
+
+
+
+
+
+<!-- Testimoni Modern GOPAN (Lebih Lengkap & Profesional) -->
+<section id="testimoni" class="testimoni-section py-5" style="background: linear-gradient(135deg, #ffffff, #f8f9fc);">
+  <div class="container text-center">
+    
+    <!-- Judul -->
+    <h2 class="section-title mb-3">Testimoni</h2>
+    <p class="text-muted mb-5">Suara nyata dari para peternak yang telah merasakan manfaat bergabung bersama <strong>GOPAN</strong> dalam meningkatkan usaha mereka.</p>
+
+    <div class="row g-4 justify-content-center">
+      
+      <!-- Testimoni 1 -->
+      <div class="col-12 col-md-4 fade-up">
+        <div class="testimoni-card shadow-lg rounded-5 h-100 d-flex flex-column align-items-center text-center p-4">
+          <div class="avatar mb-3">
+            <img src="https://via.placeholder.com/90" alt="Agus" class="rounded-circle">
+          </div>
+          <i class="bi bi-quote fs-1 mb-3 quote-icon"></i>
+          <p class="fst-italic flex-grow-1">“Bergabung dengan <b>GOPAN</b> membuat usaha ternak ayam saya lebih terarah, sistem manajemennya semakin rapi, dan hasil produksi meningkat.”</p>
+          <h6 class="fw-bold mt-3 testimoni-name">Agus</h6>
+          <small class="text-muted">Peternak Ayam Broiler</small>
+        </div>
+      </div>
+
+      <!-- Testimoni 2 -->
+      <div class="col-12 col-md-4 fade-up">
+        <div class="testimoni-card shadow-lg rounded-5 h-100 d-flex flex-column align-items-center text-center p-4">
+          <div class="avatar mb-3">
+            <img src="https://via.placeholder.com/90" alt="Siti" class="rounded-circle">
+          </div>
+          <i class="bi bi-quote fs-1 mb-3 quote-icon"></i>
+          <p class="fst-italic flex-grow-1">“Melalui <b>GOPAN</b>, saya selalu mendapat update harga pakan dan pasar ayam. Informasi ini sangat membantu menjaga stabilitas usaha.”</p>
+          <h6 class="fw-bold mt-3 testimoni-name">Siti</h6>
+          <small class="text-muted">Peternak Ayam Petelur</small>
+        </div>
+      </div>
+
+      <!-- Testimoni 3 -->
+      <div class="col-12 col-md-4 fade-up">
+        <div class="testimoni-card shadow-lg rounded-5 h-100 d-flex flex-column align-items-center text-center p-4">
+          <div class="avatar mb-3">
+            <img src="https://via.placeholder.com/90" alt="Rudi" class="rounded-circle">
+          </div>
+          <i class="bi bi-quote fs-1 mb-3 quote-icon"></i>
+          <p class="fst-italic flex-grow-1">“<b>GOPAN</b> mempererat solidaritas antar peternak. Dengan kerja sama, kami lebih kuat menghadapi tantangan industri perunggasan.”</p>
+          <h6 class="fw-bold mt-3 testimoni-name">Rudi</h6>
+          <small class="text-muted">Anggota GOPAN</small>
+        </div>
+      </div>
+
+      <!-- Testimoni 4 -->
+      <div class="col-12 col-md-4 fade-up">
+        <div class="testimoni-card shadow-lg rounded-5 h-100 d-flex flex-column align-items-center text-center p-4">
+          <div class="avatar mb-3">
+            <img src="https://via.placeholder.com/90" alt="Dewi" class="rounded-circle">
+          </div>
+          <i class="bi bi-quote fs-1 mb-3 quote-icon"></i>
+          <p class="fst-italic flex-grow-1">“Lewat <b>GOPAN</b>, saya mendapat banyak pelatihan manajemen dan kesehatan ternak. Ini membuat usaha lebih modern dan profesional.”</p>
+          <h6 class="fw-bold mt-3 testimoni-name">Dewi</h6>
+          <small class="text-muted">Peternak Mandiri</small>
+        </div>
+      </div>
+
+      <!-- Testimoni 5 -->
+      <div class="col-12 col-md-4 fade-up">
+        <div class="testimoni-card shadow-lg rounded-5 h-100 d-flex flex-column align-items-center text-center p-4">
+          <div class="avatar mb-3">
+            <img src="https://via.placeholder.com/90" alt="Budi" class="rounded-circle">
+          </div>
+          <i class="bi bi-quote fs-1 mb-3 quote-icon"></i>
+          <p class="fst-italic flex-grow-1">“Dengan dukungan <b>GOPAN</b>, pemasaran hasil ternak lebih luas. Kami bisa langsung terhubung ke pembeli dengan harga lebih adil.”</p>
+          <h6 class="fw-bold mt-3 testimoni-name">Budi</h6>
+          <small class="text-muted">Peternak Ayam Kampung</small>
+        </div>
+      </div>
+
+      <!-- Testimoni 6 -->
+      <div class="col-12 col-md-4 fade-up">
+        <div class="testimoni-card shadow-lg rounded-5 h-100 d-flex flex-column align-items-center text-center p-4">
+          <div class="avatar mb-3">
+            <img src="https://via.placeholder.com/90" alt="Sri" class="rounded-circle">
+          </div>
+          <i class="bi bi-quote fs-1 mb-3 quote-icon"></i>
+          <p class="fst-italic flex-grow-1">“<b>GOPAN</b> membantu memperjuangkan aspirasi peternak kecil, sehingga kami merasa lebih diperhatikan dan sejahtera.”</p>
+          <h6 class="fw-bold mt-3 testimoni-name">Sri</h6>
+          <small class="text-muted">Peternak Plasma</small>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Custom CSS -->
+<style>
+/* Section Title */
+.section-title {
+  font-size: 2rem;
+  font-weight: 700;
+  display: inline-block;
+  background: linear-gradient(45deg, #6a11cb, #2575fc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: relative;
+}
+.section-title::after {
+  content: "";
+  display: block;
+  width: 70px;
+  height: 3px;
+  background: linear-gradient(90deg, #6a11cb, #2575fc);
+  margin: 0.5rem auto 0;
+  border-radius: 2px;
+}
+
+/* Testimoni Card */
+.testimoni-card {
+  background: #fff;
+  border: 1px solid rgba(106,17,203,0.08);
+  transition: transform 0.35s ease, box-shadow 0.35s ease, border 0.35s ease;
+}
+.testimoni-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 18px 35px rgba(0,0,0,0.12);
+  border: 1px solid rgba(106,17,203,0.25);
+}
+.testimoni-card p {
+  font-size: 1rem;
+  color: #444;
+  line-height: 1.7;
+  margin-bottom: 1rem;
+}
+.testimoni-card .testimoni-name {
+  color: #2c3e50;
+}
+.testimoni-card:hover .testimoni-name {
+  color: #6a11cb;
+}
+
+/* Avatar dengan border gradient */
+.avatar img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border: 3px solid transparent;
+  background-image: linear-gradient(white, white), linear-gradient(45deg, #6a11cb, #2575fc);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+  padding: 3px;
+  transition: transform 0.3s ease;
+}
+.testimoni-card:hover .avatar img {
+  transform: scale(1.05);
+}
+
+/* Quote Icon Gradient */
+.quote-icon {
+  background: linear-gradient(45deg, #6a11cb, #2575fc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+  transition: transform 0.3s ease, text-shadow 0.3s ease;
+}
+.testimoni-card:hover .quote-icon {
+  transform: rotate(-6deg) scale(1.15);
+  text-shadow: 0 6px 14px rgba(106,17,203,0.35);
+}
+
+/* Fade Up Animasi */
+.fade-up {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp 0.9s forwards;
+}
+.fade-up:nth-child(1) { animation-delay: 0.15s; }
+.fade-up:nth-child(2) { animation-delay: 0.35s; }
+.fade-up:nth-child(3) { animation-delay: 0.55s; }
+
+@keyframes fadeUp {
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .section-title { font-size: 1.8rem; }
+}
+@media (max-width: 576px) {
+  .section-title { font-size: 1.5rem; }
+  .avatar img { width: 70px; height: 70px; }
+}
+</style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Galeri Modern GOPAN (Lebih Lengkap & Profesional - 9 Item) -->
+<section id="galeri" class="py-5" style="background: linear-gradient(135deg, #fdfdfd, #f5f7fa);">
+  <div class="container text-center">
+    <!-- Judul Section -->
+    <h2 class="section-title mb-3">Galeri Kegiatan</h2>
+    <p class="text-muted mb-5">Dokumentasi berbagai aktivitas penting <strong>GOPAN</strong> dalam mendukung peternak ayam di seluruh Indonesia.</p>
+
+  <!-- ================== GALERI GOPAN ================== -->
+<div class="row g-4 justify-content-center">
+
+  <!-- Item 1 -->
+  <div class="col-12 col-sm-6 col-md-4 fade-up">
+    <div class="gallery-item">
+      <img src="<?php echo base_url('assets/img/galeri1.jpg'); ?>" class="gallery-img" alt="Pelatihan Manajemen Ternak">
+      <div class="overlay">Pelatihan Manajemen Ternak</div>
+    </div>
+  </div>
+
+  <!-- Item 2 -->
+  <div class="col-12 col-sm-6 col-md-4 fade-up" style="animation-delay: 0.2s;">
+    <div class="gallery-item">
+      <img src="<?php echo base_url('assets/img/galeri2.jpg'); ?>" class="gallery-img" alt="Rapat Anggota GOPAN">
+      <div class="overlay">Rapat Anggota & Koordinasi</div>
+    </div>
+  </div>
+
+  <!-- Item 3 -->
+  <div class="col-12 col-sm-6 col-md-4 fade-up" style="animation-delay: 0.4s;">
+    <div class="gallery-item">
+      <img src="<?php echo base_url('assets/img/galeri3.jpg'); ?>" class="gallery-img" alt="Kunjungan Kandang Ayam">
+      <div class="overlay">Kunjungan Kandang Ayam</div>
+    </div>
+  </div>
+
+  <!-- Item 4 -->
+  <div class="col-12 col-sm-6 col-md-4 fade-up" style="animation-delay: 0.6s;">
+    <div class="gallery-item">
+      <img src="<?php echo base_url('assets/img/galeri4.jpg'); ?>" class="gallery-img" alt="Kerja Sama dengan Pemerintah">
+      <div class="overlay">Kerja Sama dengan Pemerintah</div>
+    </div>
+  </div>
+
+  <!-- Item 5 -->
+  <div class="col-12 col-sm-6 col-md-4 fade-up" style="animation-delay: 0.8s;">
+    <div class="gallery-item">
+      <img src="<?php echo base_url('assets/img/galeri5.jpg'); ?>" class="gallery-img" alt="Expo Perunggasan">
+      <div class="overlay">Pameran & Expo Perunggasan</div>
+    </div>
+  </div>
+
+  <!-- Item 6 -->
+  <div class="col-12 col-sm-6 col-md-4 fade-up" style="animation-delay: 1s;">
+    <div class="gallery-item">
+      <img src="<?php echo base_url('assets/img/galeri6.jpg'); ?>" class="gallery-img" alt="Diskusi Panel GOPAN">
+      <div class="overlay">Diskusi Panel & Advokasi</div>
+    </div>
+  </div>
+
+  <!-- Item 7 -->
+  <div class="col-12 col-sm-6 col-md-4 fade-up" style="animation-delay: 1.2s;">
+    <div class="gallery-item">
+      <img src="<?php echo base_url('assets/img/galeri7.jpg'); ?>" class="gallery-img" alt="Aksi Sosial Peternak">
+      <div class="overlay">Aksi Sosial & Kepedulian</div>
+    </div>
+  </div>
+
+  <!-- Item 8 -->
+  <div class="col-12 col-sm-6 col-md-4 fade-up" style="animation-delay: 1.4s;">
+    <div class="gallery-item">
+      <img src="<?php echo base_url('assets/img/galeri8.jpg'); ?>" class="gallery-img" alt="Solidaritas Anggota GOPAN">
+      <div class="overlay">Solidaritas & Kebersamaan</div>
+    </div>
+  </div>
+
+  <!-- Item 9 -->
+  <div class="col-12 col-sm-6 col-md-4 fade-up" style="animation-delay: 1.6s;">
+    <div class="gallery-item">
+      <img src="<?php echo base_url('assets/img/galeri9.jpg'); ?>" class="gallery-img" alt="Penandatanganan MoU GOPAN">
+      <div class="overlay">Penandatanganan MoU Strategis</div>
+    </div>
+  </div>
+
+</div>
+
+  </div>
+</section>
+
+
+<!-- CSS Modern Galeri -->
+<style>
+/* Section Title */
+.section-title {
+  font-size: 2rem;
+  font-weight: 700;
+  display: inline-block;
+  background: linear-gradient(45deg, #6a11cb, #2575fc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: relative;
+}
+.section-title::after {
+  content: "";
+  display: block;
+  width: 70px;
+  height: 3px;
+  background: linear-gradient(90deg, #6a11cb, #2575fc);
+  margin: 0.6rem auto 0;
+  border-radius: 2px;
+  animation: expandBar 0.8s ease forwards;
+}
+
+/* Gallery Item */
+.gallery-item {
+  position: relative;
+  border-radius: 1.2rem;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+.gallery-item:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+/* Image */
+.gallery-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+.gallery-item:hover .gallery-img {
+  transform: scale(1.12);
+}
+
+/* Overlay */
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0,0,0,0.05) 0%, rgba(0,0,0,0.6) 100%);
+  opacity: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.5s ease;
+}
+.gallery-item:hover .overlay {
+  opacity: 1;
+}
+
+/* Overlay Text */
+.overlay-text {
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-shadow: 0 4px 12px rgba(0,0,0,0.4);
+  transform: translateY(15px);
+  opacity: 0;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+.gallery-item:hover .overlay-text {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* Animasi Fade Up */
+.fade-up {
+  opacity: 0;
+  transform: translateY(25px) scale(0.98);
+  animation: fadeUp 0.9s forwards;
+}
+.fade-up:nth-child(1) { animation-delay: 0.1s; }
+.fade-up:nth-child(2) { animation-delay: 0.3s; }
+.fade-up:nth-child(3) { animation-delay: 0.5s; }
+
+@keyframes fadeUp {
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+@keyframes expandBar {
+  from { width: 0; opacity: 0; }
+  to { width: 70px; opacity: 1; }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .section-title { font-size: 1.7rem; }
+  .overlay-text { font-size: 1.05rem; }
+}
+@media (max-width: 576px) {
+  .section-title { font-size: 1.4rem; }
+  .overlay-text { font-size: 0.95rem; }
+}
+   .gallery-item {
+      position: relative;
+      overflow: hidden;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      height: 250px; /* Tinggi tetap agar grid rata */
+    }
+    .gallery-item img.gallery-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; /* Agar gambar memenuhi area */
+      transition: transform 0.4s ease;
+    }
+    .gallery-item:hover img {
+      transform: scale(1.1);
+    }
+    .overlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      padding: 10px 15px;
+      background: rgba(0,0,0,0.6);
+      color: #fff;
+      text-align: center;
+      font-weight: 500;
+      font-size: 0.95rem;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+    .gallery-item:hover .overlay {
+      opacity: 1;
+    }
+</style>
+
+
+
+
+
+
+
+
+
+
+
+<!-- Artikel & Berita Modern GOPAN (Profesional & Lengkap) -->
+<section id="artikel" class="py-5" style="background: linear-gradient(135deg, #fdfdfd, #f5f7fa);">
+  <div class="container text-center">
+    
+    <!-- Judul Section -->
+    <h2 class="section-title mb-3">Artikel & Berita <span class="highlight">GOPAN</span></h2>
+    <p class="text-muted mb-5">
+      Informasi terkini seputar dunia peternakan ayam, inovasi, kebijakan, dan kegiatan utama GOPAN dalam memperjuangkan peternak Indonesia.
+    </p>
+
+    <!-- Grid Artikel -->
+    <div class="row g-4 justify-content-center">
+
+      <!-- Artikel 1 -->
+      <div class="col-12 col-md-4 fade-up">
+        <div class="article-card h-100">
+          <div class="article-img-wrapper">
+            <img src="<?php echo base_url('assets/img/artikel1.jpg'); ?>" class="img-fluid article-img" alt="Digitalisasi Peternakan">
+          </div>
+          <div class="article-card-body p-4 text-start">
+            <span class="badge kategori-badge mb-2">Teknologi</span>
+            <h5 class="fw-bold article-title">Digitalisasi Peternakan Ayam</h5>
+            <p class="text-muted small">
+              Pemanfaatan teknologi digital dalam manajemen kandang untuk meningkatkan produktivitas dan efisiensi usaha peternak.
+            </p>
+            <a href="#" class="btn btn-sm btn-gopan mt-2" data-bs-toggle="modal" data-bs-target="#artikel1">Baca Selengkapnya</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Artikel 2 -->
+      <div class="col-12 col-md-4 fade-up" style="animation-delay:0.2s;">
+        <div class="article-card h-100">
+          <div class="article-img-wrapper">
+            <img src="<?php echo base_url('assets/img/artikel2.jpg'); ?>" class="img-fluid article-img" alt="Harga Pakan Ayam">
+          </div>
+          <div class="article-card-body p-4 text-start">
+            <span class="badge kategori-badge mb-2">Ekonomi</span>
+            <h5 class="fw-bold article-title">Dinamika Harga Pakan</h5>
+            <p class="text-muted small">
+              Strategi GOPAN dalam menghadapi fluktuasi harga pakan dan menjaga keberlanjutan usaha peternak ayam di Indonesia.
+            </p>
+            <a href="#" class="btn btn-sm btn-gopan mt-2" data-bs-toggle="modal" data-bs-target="#artikel2">Baca Selengkapnya</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Artikel 3 -->
+      <div class="col-12 col-md-4 fade-up" style="animation-delay:0.4s;">
+        <div class="article-card h-100">
+          <div class="article-img-wrapper">
+            <img src="<?php echo base_url('assets/img/artikel3.jpg'); ?>" class="img-fluid article-img" alt="Komunitas Peternak Ayam">
+          </div>
+          <div class="article-card-body p-4 text-start">
+            <span class="badge kategori-badge mb-2">Komunitas</span>
+            <h5 class="fw-bold article-title">Solidaritas Peternak</h5>
+            <p class="text-muted small">
+              Peran GOPAN dalam memperkuat jaringan, persatuan, dan kebersamaan komunitas peternak ayam di seluruh Indonesia.
+            </p>
+            <a href="#" class="btn btn-sm btn-gopan mt-2" data-bs-toggle="modal" data-bs-target="#artikel3">Baca Selengkapnya</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Artikel 4 -->
+      <div class="col-12 col-md-4 fade-up" style="animation-delay:0.6s;">
+        <div class="article-card h-100">
+          <div class="article-img-wrapper">
+            <img src="<?php echo base_url('assets/img/artikel4.jpg'); ?>" class="img-fluid article-img" alt="Kebijakan Pemerintah">
+          </div>
+          <div class="article-card-body p-4 text-start">
+            <span class="badge kategori-badge mb-2">Kebijakan</span>
+            <h5 class="fw-bold article-title">Advokasi & Regulasi</h5>
+            <p class="text-muted small">
+              Upaya GOPAN dalam mendorong regulasi yang berpihak pada peternak ayam melalui advokasi dan kerja sama dengan pemerintah.
+            </p>
+            <a href="#" class="btn btn-sm btn-gopan mt-2" data-bs-toggle="modal" data-bs-target="#artikel4">Baca Selengkapnya</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Artikel 5 -->
+      <div class="col-12 col-md-4 fade-up" style="animation-delay:0.8s;">
+        <div class="article-card h-100">
+          <div class="article-img-wrapper">
+            <img src="<?php echo base_url('assets/img/artikel5.jpg'); ?>" class="img-fluid article-img" alt="Pelatihan Peternak">
+          </div>
+          <div class="article-card-body p-4 text-start">
+            <span class="badge kategori-badge mb-2">Edukasi</span>
+            <h5 class="fw-bold article-title">Pelatihan & Workshop</h5>
+            <p class="text-muted small">
+              GOPAN aktif mengadakan pelatihan, seminar, dan workshop untuk meningkatkan kualitas SDM peternak ayam.
+            </p>
+            <a href="#" class="btn btn-sm btn-gopan mt-2" data-bs-toggle="modal" data-bs-target="#artikel5">Baca Selengkapnya</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Artikel 6 -->
+      <div class="col-12 col-md-4 fade-up" style="animation-delay:1s;">
+        <div class="article-card h-100">
+          <div class="article-img-wrapper">
+            <img src="<?php echo base_url('assets/img/artikel6.jpg'); ?>" class="img-fluid article-img" alt="Pasar Ayam">
+          </div>
+          <div class="article-card-body p-4 text-start">
+            <span class="badge kategori-badge mb-2">Pasar</span>
+            <h5 class="fw-bold article-title">Akses Pasar Nasional</h5>
+            <p class="text-muted small">
+              GOPAN menjembatani peternak untuk mendapatkan akses pasar yang lebih luas, transparan, dan berkeadilan.
+            </p>
+            <a href="#" class="btn btn-sm btn-gopan mt-2" data-bs-toggle="modal" data-bs-target="#artikel6">Baca Selengkapnya</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- CSS Modern Artikel -->
+<style>
+/* Article Card */
+.article-card {
+  background: #fff;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+.article-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 14px 28px rgba(0,0,0,0.12);
+}
+
+/* Article Image */
+.article-img-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+.article-img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+.article-card:hover .article-img {
+  transform: scale(1.08);
+}
+
+/* Card Body */
+.article-card-body .article-title {
+  font-size: 1.1rem;
+  color: #2c3e50;
+  margin-bottom: 0.5rem;
+}
+.article-card-body p {
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+/* Badge */
+.kategori-badge {
+  background: linear-gradient(45deg, #6a11cb, #2575fc);
+  color: #fff;
+  font-size: 0.75rem;
+  padding: 0.4rem 0.7rem;
+  border-radius: 0.5rem;
+}
+
+/* Button GOPAN */
+.btn-gopan {
+  background: linear-gradient(45deg, #6a11cb, #2575fc);
+  color: #fff;
+  font-weight: 500;
+  border-radius: 0.5rem;
+  transition: all 0.3s ease;
+}
+.btn-gopan:hover {
+  background: linear-gradient(45deg, #2575fc, #6a11cb);
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+/* Fade Up Animation */
+.fade-up {
+  opacity: 0;
+  transform: translateY(25px);
+  animation: fadeUp 0.9s forwards;
+}
+.fade-up:nth-child(1) { animation-delay: 0.1s; }
+.fade-up:nth-child(2) { animation-delay: 0.3s; }
+.fade-up:nth-child(3) { animation-delay: 0.5s; }
+
+@keyframes fadeUp {
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .article-img { height: 200px; }
+}
+@media (max-width: 576px) {
+  .article-img { height: 180px; }
+  .article-card-body .article-title { font-size: 1rem; }
+}
+</style>
+
+
+<!-- ================== MODAL ARTIKEL LENGKAP ================== -->
+
+<!-- Modal Artikel 1 -->
+<div class="modal fade" id="artikel1" tabindex="-1" aria-labelledby="artikel1Label" aria-hidden="true">
+  <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content rounded-4 shadow-lg border-0">
+      <div class="modal-header bg-gradient-primary text-white">
+        <h5 class="modal-title fw-bold" id="artikel1Label">
+          <i class="bi bi-cpu me-2"></i> Digitalisasi Peternakan Ayam
+        </h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body px-4 py-4">
+        <div class="row g-4 align-items-center">
+          <div class="col-lg-5 text-center">
+            <img src="<?php echo base_url('assets/img/artikel1.jpg'); ?>" class="img-fluid rounded-3 shadow-sm" alt="Digitalisasi Peternakan">
+          </div>
+          <div class="col-lg-7 text-start">
+            <p>Digitalisasi membawa revolusi pada manajemen kandang ayam. Dengan teknologi modern, peternak dapat memantau kondisi ternak secara real-time, mengurangi resiko kerugian, serta meningkatkan produktivitas.</p>
+            <h6 class="fw-bold mb-2">Fokus GOPAN dalam digitalisasi:</h6>
+            <ul class="list-unstyled ps-2">
+              <li><i class="bi bi-check-circle-fill text-primary me-2"></i> Sensor IoT untuk monitoring suhu & kelembaban kandang.</li>
+              <li><i class="bi bi-check-circle-fill text-primary me-2"></i> Aplikasi mobile untuk pencatatan produksi & kesehatan ayam.</li>
+              <li><i class="bi bi-check-circle-fill text-primary me-2"></i> Sistem pemberian pakan & air otomatis berbasis data.</li>
+              <li><i class="bi bi-check-circle-fill text-primary me-2"></i> Laporan digital harian yang membantu pengambilan keputusan.</li>
+            </ul>
+            <p class="mb-0">Dengan dukungan GOPAN, peternak bisa mengurangi biaya operasional hingga <strong>15%</strong> dan meningkatkan produktivitas hingga <strong>20%</strong>.</p>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer justify-content-center">
+        <button type="button" class="btn btn-gradient px-4 py-2 rounded-pill" data-bs-dismiss="modal">Tutup</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Artikel 2 -->
+<div class="modal fade" id="artikel2" tabindex="-1" aria-labelledby="artikel2Label" aria-hidden="true">
+  <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content rounded-4 shadow-lg border-0">
+      <div class="modal-header bg-gradient-success text-white">
+        <h5 class="modal-title fw-bold" id="artikel2Label">
+          <i class="bi bi-graph-up-arrow me-2"></i> Dinamika Harga Pakan
+        </h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body px-4 py-4">
+        <div class="row g-4 align-items-center">
+          <div class="col-lg-5 text-center">
+            <img src="<?php echo base_url('assets/img/artikel2.jpg'); ?>" class="img-fluid rounded-3 shadow-sm" alt="Harga Pakan Ayam">
+          </div>
+          <div class="col-lg-7 text-start">
+            <p>Pakan menyumbang lebih dari 70% biaya operasional peternakan ayam. Fluktuasi harga pakan berdampak besar pada keberlangsungan usaha peternak.</p>
+            <h6 class="fw-bold mb-2">Langkah GOPAN untuk membantu peternak:</h6>
+            <ul class="list-unstyled ps-2">
+              <li><i class="bi bi-check-circle-fill text-success me-2"></i> Skema pembelian kolektif untuk menekan harga.</li>
+              <li><i class="bi bi-check-circle-fill text-success me-2"></i> Edukasi tentang formulasi pakan alternatif & lokal.</li>
+              <li><i class="bi bi-check-circle-fill text-success me-2"></i> Kerja sama langsung dengan produsen pakan besar.</li>
+              <li><i class="bi bi-check-circle-fill text-success me-2"></i> Sistem monitoring harga pakan nasional oleh GOPAN.</li>
+            </ul>
+            <p>Dengan strategi ini, biaya pakan bisa ditekan hingga <strong>10%</strong> dan risiko fluktuasi lebih terkendali.</p>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer justify-content-center">
+        <button type="button" class="btn btn-gradient-success px-4 py-2 rounded-pill" data-bs-dismiss="modal">Tutup</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Artikel 3 -->
+<div class="modal fade" id="artikel3" tabindex="-1" aria-labelledby="artikel3Label" aria-hidden="true">
+  <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content rounded-4 shadow-lg border-0">
+      <div class="modal-header bg-gradient-warning text-dark">
+        <h5 class="modal-title fw-bold" id="artikel3Label">
+          <i class="bi bi-people-fill me-2"></i> Solidaritas Peternak
+        </h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body px-4 py-4">
+        <div class="row g-4 align-items-center">
+          <div class="col-lg-5 text-center">
+            <img src="<?php echo base_url('assets/img/artikel3.jpg'); ?>" class="img-fluid rounded-3 shadow-sm" alt="Komunitas Peternak">
+          </div>
+          <div class="col-lg-7 text-start">
+            <p>Solidaritas adalah kekuatan utama peternak. Dengan jaringan yang kuat, peternak lebih siap menghadapi tantangan harga, penyakit, dan akses pasar.</p>
+            <h6 class="fw-bold mb-2">Peran GOPAN dalam komunitas:</h6>
+            <ul class="list-unstyled ps-2">
+              <li><i class="bi bi-check-circle-fill text-warning me-2"></i> Forum nasional peternak ayam se-Indonesia.</li>
+              <li><i class="bi bi-check-circle-fill text-warning me-2"></i> Bantuan cepat tanggap untuk peternak terdampak krisis.</li>
+              <li><i class="bi bi-check-circle-fill text-warning me-2"></i> Pertukaran informasi dan inovasi antaranggota.</li>
+              <li><i class="bi bi-check-circle-fill text-warning me-2"></i> Kolaborasi antar komunitas untuk penguatan daya tawar.</li>
+            </ul>
+            <p class="mb-0">Dengan lebih dari <strong>10.000 anggota</strong>, GOPAN menjadi rumah besar bagi peternak ayam Indonesia.</p>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer justify-content-center">
+        <button type="button" class="btn btn-gradient-warning px-4 py-2 rounded-pill" data-bs-dismiss="modal">Tutup</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Artikel 4 -->
+<div class="modal fade" id="artikel4" tabindex="-1" aria-labelledby="artikel4Label" aria-hidden="true">
+  <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content rounded-4 shadow-lg border-0">
+      <div class="modal-header bg-gradient-primary text-white">
+        <h5 class="modal-title fw-bold" id="artikel4Label">
+          <i class="bi bi-megaphone-fill me-2"></i> Advokasi & Regulasi
+        </h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body px-4 py-4">
+        <div class="row g-4 align-items-center">
+          <div class="col-lg-5 text-center">
+            <img src="<?php echo base_url('assets/img/artikel4.jpg'); ?>" class="img-fluid rounded-3 shadow-sm" alt="Kebijakan Pemerintah">
+          </div>
+          <div class="col-lg-7 text-start">
+            <p>GOPAN aktif memperjuangkan kebijakan yang berpihak kepada peternak ayam melalui advokasi dan kolaborasi dengan pemerintah pusat maupun daerah.</p>
+            <h6 class="fw-bold mb-2">Langkah advokasi GOPAN:</h6>
+            <ul class="list-unstyled ps-2">
+              <li><i class="bi bi-check-circle-fill text-primary me-2"></i> Mengusulkan regulasi harga dasar ayam agar lebih adil.</li>
+              <li><i class="bi bi-check-circle-fill text-primary me-2"></i> Memperjuangkan subsidi pakan untuk peternak kecil.</li>
+              <li><i class="bi bi-check-circle-fill text-primary me-2"></i> Kolaborasi dengan DPR dan Kementerian Pertanian.</li>
+            </ul>
+            <p>Kebijakan yang tepat akan menjaga kesejahteraan peternak sekaligus ketahanan pangan nasional.</p>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer justify-content-center">
+        <button type="button" class="btn btn-gradient px-4 py-2 rounded-pill" data-bs-dismiss="modal">Tutup</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Artikel 5 -->
+<div class="modal fade" id="artikel5" tabindex="-1" aria-labelledby="artikel5Label" aria-hidden="true">
+  <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content rounded-4 shadow-lg border-0">
+      <div class="modal-header bg-gradient-success text-white">
+        <h5 class="modal-title fw-bold" id="artikel5Label">
+          <i class="bi bi-journal-text me-2"></i> Pelatihan & Workshop
+        </h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body px-4 py-4">
+        <div class="row g-4 align-items-center">
+          <div class="col-lg-5 text-center">
+            <img src="<?php echo base_url('assets/img/artikel5.jpg'); ?>" class="img-fluid rounded-3 shadow-sm" alt="Pelatihan Peternak">
+          </div>
+          <div class="col-lg-7 text-start">
+            <p>Edukasi adalah kunci sukses peternak. GOPAN rutin mengadakan program pelatihan, seminar, dan workshop yang diikuti ribuan peternak di seluruh Indonesia.</p>
+            <h6 class="fw-bold mb-2">Materi utama pelatihan GOPAN:</h6>
+            <ul class="list-unstyled ps-2">
+              <li><i class="bi bi-check-circle-fill text-success me-2"></i> Manajemen kandang modern.</li>
+              <li><i class="bi bi-check-circle-fill text-success me-2"></i> Formulasi pakan hemat biaya.</li>
+              <li><i class="bi bi-check-circle-fill text-success me-2"></i> Strategi pemasaran digital hasil ternak.</li>
+              <li><i class="bi bi-check-circle-fill text-success me-2"></i> Pencegahan & penanganan penyakit unggas.</li>
+            </ul>
+            <p>Melalui edukasi berkelanjutan, peternak dapat terus berkembang dan meningkatkan daya saing.</p>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer justify-content-center">
+        <button type="button" class="btn btn-gradient-success px-4 py-2 rounded-pill" data-bs-dismiss="modal">Tutup</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Artikel 6 -->
+<div class="modal fade" id="artikel6" tabindex="-1" aria-labelledby="artikel6Label" aria-hidden="true">
+  <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content rounded-4 shadow-lg border-0">
+      <div class="modal-header bg-gradient-warning text-dark">
+        <h5 class="modal-title fw-bold" id="artikel6Label">
+          <i class="bi bi-cart-check-fill me-2"></i> Akses Pasar Nasional
+        </h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body px-4 py-4">
+        <div class="row g-4 align-items-center">
+          <div class="col-lg-5 text-center">
+            <img src="<?php echo base_url('assets/img/artikel6.jpg'); ?>" class="img-fluid rounded-3 shadow-sm" alt="Pasar Ayam">
+          </div>
+          <div class="col-lg-7 text-start">
+            <p>Akses pasar yang luas adalah kunci keberhasilan peternak. GOPAN hadir sebagai penghubung antara peternak dengan pasar nasional maupun internasional.</p>
+            <h6 class="fw-bold mb-2">Inisiatif akses pasar GOPAN:</h6>
+            <ul class="list-unstyled ps-2">
+              <li><i class="bi bi-check-circle-fill text-warning me-2"></i> Kerjasama dengan supermarket dan distributor besar.</li>
+              <li><i class="bi bi-check-circle-fill text-warning me-2"></i> Platform digital untuk penjualan ayam langsung ke konsumen.</li>
+              <li><i class="bi bi-check-circle-fill text-warning me-2"></i> Menciptakan sistem harga transparan dan adil.</li>
+            </ul>
+            <p>Dengan dukungan GOPAN, peternak mampu menjual hasil produksi dengan harga yang lebih kompetitif dan stabil.</p>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer justify-content-center">
+        <button type="button" class="btn btn-gradient-warning px-4 py-2 rounded-pill" data-bs-dismiss="modal">Tutup</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- ================== CSS Tambahan ================== -->
+<style>
+/* Header Gradient */
+.bg-gradient-primary { background: linear-gradient(90deg,#6a11cb,#2575fc); }
+.bg-gradient-success { background: linear-gradient(90deg,#00b09b,#96c93d); }
+.bg-gradient-warning { background: linear-gradient(90deg,#f6d365,#fda085); }
+
+/* Tombol Gradient */
+.btn-gradient {
+  background: linear-gradient(45deg, #6a11cb, #2575fc);
+  color: #fff; font-weight: 600; border: none;
+  transition: all 0.3s ease;
+}
+.btn-gradient:hover {
+  opacity: 0.9; transform: translateY(-2px);
+}
+.btn-gradient-success {
+  background: linear-gradient(45deg, #00b09b, #96c93d); color: #fff;
+}
+.btn-gradient-warning {
+  background: linear-gradient(45deg, #f6d365, #fda085); color: #fff;
+}
+</style>
+
+
+
+
+
+
+
+
+
+<!-- FAQ Modern GOPAN (Versi Profesional Lengkap dan Kuat) -->
+<section id="faq" class="bg-light py-5">
+  <div class="container">
+    <!-- Judul -->
+    <div class="text-center mb-5 fade-in-up">
+      <h2 class="section-title">Pertanyaan Umum tentang GOPAN</h2>
+      <p class="text-muted">
+        Jawaban lengkap mengenai peran, manfaat, dan program <strong>GOPAN</strong> (Garda Organisasi Peternak Ayam Nasional) 
+        sebagai pelopor modernisasi dan digitalisasi peternakan ayam di Indonesia.
+      </p>
+    </div>
+
+    <!-- Accordion FAQ -->
+    <div class="accordion" id="faqAccordion">
+
+      <!-- FAQ 1 -->
+      <div class="accordion-item fade-in-up" style="animation-delay:0.1s;">
+        <h2 class="accordion-header" id="headingOne">
+          <button class="accordion-button fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#faq1" aria-expanded="true">
+            <i class="bi bi-question-circle me-2 faq-icon"></i> Apa itu GOPAN dan apa visinya?
+          </button>
+        </h2>
+        <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            <p><strong>GOPAN (Garda Organisasi Peternak Ayam Nasional)</strong> adalah organisasi nasional yang berfokus pada peningkatan kesejahteraan peternak ayam Indonesia melalui <strong>pendampingan, edukasi, teknologi, dan advokasi kebijakan</strong>.</p>
+            <p>Visi GOPAN adalah menciptakan <strong>ekosistem peternakan ayam yang modern, efisien, berdaya saing, dan berkelanjutan</strong> dengan memanfaatkan inovasi digital dan kolaborasi antar peternak di seluruh Indonesia.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ 2 -->
+      <div class="accordion-item fade-in-up" style="animation-delay:0.2s;">
+        <h2 class="accordion-header" id="headingTwo">
+          <button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+            <i class="bi bi-person-plus-fill me-2 faq-icon"></i> Bagaimana cara menjadi anggota GOPAN?
+          </button>
+        </h2>
+        <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            <p>Pendaftaran anggota GOPAN dapat dilakukan secara <strong>online melalui situs resmi GOPAN</strong> atau melalui kantor perwakilan GOPAN di tingkat provinsi dan kabupaten.</p>
+            <p>Langkah-langkah pendaftaran:</p>
+            <ul>
+              <li>Mengisi formulir registrasi di website GOPAN.</li>
+              <li>Melampirkan data usaha peternakan yang valid.</li>
+              <li>Verifikasi oleh tim GOPAN wilayah.</li>
+              <li>Setelah disetujui, anggota akan mendapatkan <strong>ID resmi GOPAN</strong> dan akses ke portal edukasi serta komunitas digital.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ 3 -->
+      <div class="accordion-item fade-in-up" style="animation-delay:0.3s;">
+        <h2 class="accordion-header" id="headingThree">
+          <button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+            <i class="bi bi-cash-coin me-2 faq-icon"></i> Apakah ada biaya keanggotaan GOPAN?
+          </button>
+        </h2>
+        <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            <p>Ya, terdapat dua kategori keanggotaan:</p>
+            <ul>
+              <li><strong>Anggota Biasa:</strong> Membayar iuran tahunan terjangkau untuk mendapatkan fasilitas pelatihan, advokasi, dan akses informasi pasar.</li>
+              <li><strong>Anggota Premium:</strong> Mendapatkan tambahan akses ke sistem digital GOPAN, data pasar nasional, dan dukungan langsung dari tim teknis GOPAN.</li>
+            </ul>
+            <p>Semua dana digunakan secara transparan untuk mendukung kegiatan organisasi, riset, pelatihan, serta peningkatan kesejahteraan peternak.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ 4 -->
+      <div class="accordion-item fade-in-up" style="animation-delay:0.4s;">
+        <h2 class="accordion-header" id="headingFour">
+          <button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+            <i class="bi bi-lightbulb me-2 faq-icon"></i> Apa saja manfaat bergabung dengan GOPAN?
+          </button>
+        </h2>
+        <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            <ul>
+              <li><strong>Pendampingan langsung</strong> dari ahli dan konsultan peternakan.</li>
+              <li><strong>Akses data harga pakan dan ayam nasional</strong> secara real-time.</li>
+              <li><strong>Program pelatihan dan sertifikasi</strong> manajemen peternakan modern.</li>
+              <li><strong>Jaringan komunitas nasional</strong> untuk kolaborasi dan pemasaran.</li>
+              <li><strong>Perlindungan hukum dan advokasi</strong> untuk kebijakan yang pro-peternak.</li>
+              <li><strong>Platform digital GOPAN</strong> untuk monitoring ternak, produksi, dan penjualan.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ 5 -->
+      <div class="accordion-item fade-in-up" style="animation-delay:0.5s;">
+        <h2 class="accordion-header" id="headingFive">
+          <button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#faq5">
+            <i class="bi bi-globe-asia-australia me-2 faq-icon"></i> Apa peran GOPAN dalam industri peternakan nasional?
+          </button>
+        </h2>
+        <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            <p><strong>GOPAN</strong> memiliki peran strategis sebagai jembatan antara peternak, pemerintah, dan industri pakan serta distribusi. Fokus utama GOPAN meliputi:</p>
+            <ul>
+              <li><strong>Advokasi kebijakan nasional</strong> yang mendukung kesejahteraan peternak.</li>
+              <li><strong>Digitalisasi sistem peternakan</strong> untuk efisiensi dan transparansi.</li>
+              <li><strong>Kolaborasi industri</strong> untuk menciptakan rantai pasok ayam nasional yang kuat.</li>
+              <li><strong>Pemberdayaan peternak kecil dan menengah</strong> agar dapat bersaing di era industri 4.0.</li>
+            </ul>
+            <p>Melalui visi ini, GOPAN berkomitmen membangun <strong>peternakan ayam Indonesia yang berdaulat, berdaya, dan sejahtera</strong>.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ 6 (Tambahan Baru – Penguat) -->
+      <div class="accordion-item fade-in-up" style="animation-delay:0.6s;">
+        <h2 class="accordion-header" id="headingSix">
+          <button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#faq6">
+            <i class="bi bi-cpu-fill me-2 faq-icon"></i> Apa saja program unggulan dan inovasi digital GOPAN?
+          </button>
+        </h2>
+        <div id="faq6" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            <p>Untuk memperkuat posisi peternak di era digital, GOPAN meluncurkan berbagai <strong>program unggulan dan inovasi berbasis teknologi</strong> antara lain:</p>
+            <ul>
+              <li><strong>GOPAN Digital Platform</strong> – aplikasi terpadu untuk memantau produksi, distribusi, dan harga pasar ayam secara nasional.</li>
+              <li><strong>Smart Farm Program</strong> – pendampingan penerapan sensor otomatis, IoT, dan manajemen pakan digital di peternakan.</li>
+              <li><strong>Akademi GOPAN</strong> – pelatihan online dan sertifikasi nasional untuk peternak profesional.</li>
+              <li><strong>Program Kemitraan Usaha</strong> – menjembatani peternak dengan investor, koperasi, dan pasar modern.</li>
+              <li><strong>Forum Data Nasional Peternakan Ayam</strong> – pusat informasi dan analisis tren produksi ayam nasional.</li>
+            </ul>
+            <p>Melalui inovasi tersebut, GOPAN menegaskan komitmennya menjadi <strong>motor transformasi digital peternakan ayam Indonesia</strong> menuju masa depan yang lebih kuat, transparan, dan mandiri.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- CSS FAQ Modern -->
+<style>
+/* Animasi Fade In */
+.fade-in-up {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp 0.8s forwards;
+}
+@keyframes fadeUp {
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Judul */
+.section-title {
+  font-size: 2rem;
+  font-weight: 700;
+  background: linear-gradient(45deg, #6a11cb, #2575fc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.section-title::after {
+  content: "";
+  display: block;
+  width: 70px;
+  height: 3px;
+  background: linear-gradient(90deg, #6a11cb, #2575fc);
+  margin: 0.5rem auto 0;
+  border-radius: 2px;
+}
+
+/* Accordion */
+#faq .accordion-item {
+  border: none;
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+  transition: all 0.3s ease;
+}
+#faq .accordion-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.1);
+}
+#faq .accordion-button {
+  background: #fff;
+  border: none;
+  color: #1b2a6f;
+  font-size: 1rem;
+  padding: 1rem 1.25rem;
+  display: flex;
+  align-items: center;
+  border-left: 5px solid transparent;
+  transition: all 0.3s ease;
+}
+#faq .accordion-button:hover {
+  background: #f8faff;
+}
+#faq .accordion-button:not(.collapsed) {
+  background: #f0f4ff;
+  border-left: 5px solid #2575fc;
+  font-weight: 600;
+  color: #2575fc;
+}
+
+/* Body */
+#faq .accordion-body {
+  background: #fff;
+  color: #444;
+  padding: 1rem 1.25rem;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* Ikon */
+.faq-icon {
+  font-size: 1.2rem;
+  background: linear-gradient(45deg, #6a11cb, #2575fc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: transform 0.3s ease;
+}
+#faq .accordion-button:not(.collapsed) .faq-icon {
+  transform: rotate(8deg) scale(1.15);
+}
+
+/* Ikon panah default bootstrap */
+.accordion-button::after {
+  transition: transform 0.3s ease;
+}
+.accordion-button:not(.collapsed)::after {
+  transform: rotate(180deg);
+}
+
+/* Responsive */
+@media (max-width: 576px) {
+  .section-title { font-size: 1.5rem; }
+  #faq .accordion-button { font-size: 0.95rem; padding: 0.8rem 1rem; }
+  #faq .accordion-body { font-size: 0.9rem; padding: 0.8rem 1rem; }
+}
+</style>
+
+
+
+
+
+
+
+
+
+
+<!-- CTA Modern GOPAN (Versi Profesional Lengkap & Kuat) -->
+<section class="cta-section text-center text-white py-5 position-relative overflow-hidden">
+  <div class="container position-relative z-1 fade-in-up">
+    
+    <!-- Subjudul -->
+    <p class="mb-2 fw-semibold text-uppercase text-warning" style="letter-spacing: 1px;">
+      Bersatu, Berdaya, dan Berdaulat
+    </p>
+
+    <!-- Judul -->
+    <h2 class="fw-bold mb-3 cta-title">
+      Bangkit Bersama <span class="highlight">GOPAN</span>
+    </h2>
+
+    <!-- Deskripsi -->
+    <p class="lead mb-4">
+      <strong>Garda Organisasi Peternak Ayam Nasional (GOPAN)</strong> adalah gerakan nasional 
+      yang mempersatukan peternak ayam Indonesia dalam semangat 
+      <span class="fw-semibold text-highlight">solidaritas, digitalisasi, dan modernisasi</span>.
+      Kami hadir untuk menciptakan sistem peternakan yang <strong>efisien, transparan, dan berkelanjutan</strong> 
+      menuju kesejahteraan bersama.
+    </p>
+
+    <!-- Manfaat Singkat -->
+    <div class="row justify-content-center mb-4">
+      <div class="col-md-10">
+        <div class="d-flex flex-wrap justify-content-center gap-3 text-start text-md-center">
+          <span class="badge rounded-pill bg-warning text-dark px-4 py-2 fw-semibold shadow-sm">
+            <i class="bi bi-graph-up-arrow me-2"></i> Akses Data Pasar Nasional
+          </span>
+          <span class="badge rounded-pill bg-warning text-dark px-4 py-2 fw-semibold shadow-sm">
+            <i class="bi bi-mortarboard me-2"></i> Pelatihan & Sertifikasi Modern
+          </span>
+          <span class="badge rounded-pill bg-warning text-dark px-4 py-2 fw-semibold shadow-sm">
+            <i class="bi bi-cpu me-2"></i> Platform Digital GOPAN
+          </span>
+          <span class="badge rounded-pill bg-warning text-dark px-4 py-2 fw-semibold shadow-sm">
+            <i class="bi bi-shield-check me-2"></i> Advokasi & Perlindungan Peternak
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <!-- CTA Button -->
+    <a href="#kontak" class="btn cta-btn px-5 py-3">
+      <i class="bi bi-rocket-takeoff me-2"></i> Bergabung Sekarang
+    </a>
+
+    <!-- Subtext -->
+    <p class="small mt-4 text-light opacity-75">
+      Jadilah bagian dari perubahan besar menuju <strong>peternakan ayam Indonesia yang mandiri, maju, dan sejahtera</strong>.
+    </p>
+  </div>
+
+  <!-- Background Dekoratif -->
+  <div class="circle-bg circle-1"></div>
+  <div class="circle-bg circle-2"></div>
+  <div class="circle-bg circle-3"></div>
+</section>
+
+<!-- CSS CTA Modern -->
+<style>
+.cta-section {
+  background: linear-gradient(135deg, #001f3f, #004080, #007bff, #00c6ff);
+  position: relative;
+  color: #fff;
+  overflow: hidden;
+}
+
+/* Judul CTA */
+.cta-title {
+  font-size: 3rem;
+  line-height: 1.3;
+  font-weight: 800;
+  background: linear-gradient(45deg, #ffd700, #ffffff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+.highlight {
+  color: #ffd700;
+  text-shadow: 0 0 20px rgba(255,215,0,0.7);
+}
+
+/* Deskripsi */
+.cta-section p {
+  font-size: 1.15rem;
+  max-width: 850px;
+  margin: 0 auto;
+  text-shadow: 0 3px 8px rgba(0,0,0,0.25);
+}
+.text-highlight {
+  color: #ffdd57;
+}
+
+/* Badge manfaat */
+.badge {
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+}
+.badge:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(255,215,0,0.6);
+}
+
+/* Tombol CTA */
+.cta-btn {
+  font-weight: 700;
+  font-size: 1.1rem;
+  border-radius: 50px;
+  background: linear-gradient(90deg, #ffc107, #ff9100);
+  border: none;
+  color: #000;
+  transition: all 0.4s ease;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.35);
+  position: relative;
+  overflow: hidden;
+}
+.cta-btn:hover {
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: 0 0 35px rgba(255,193,7,0.8);
+  background: linear-gradient(90deg, #ffb300, #ff7b00);
+}
+
+/* Background circle dekoratif */
+.circle-bg {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.08);
+  backdrop-filter: blur(6px);
+  animation: floatCircle 6s ease-in-out infinite alternate;
+}
+.circle-1 {
+  width: 220px; height: 220px;
+  top: -60px; left: -60px;
+}
+.circle-2 {
+  width: 300px; height: 300px;
+  bottom: -100px; right: -100px;
+  animation-delay: 2s;
+}
+.circle-3 {
+  width: 180px; height: 180px;
+  top: 25%; right: -60px;
+  animation-delay: 4s;
+}
+
+/* Floating Animation */
+@keyframes floatCircle {
+  0%, 100% { transform: translateY(0) translateX(0); }
+  50% { transform: translateY(-25px) translateX(20px); }
+}
+
+/* Animasi fade-in */
+.fade-in-up {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeUp 1s forwards;
+}
+@keyframes fadeUp {
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .cta-title { font-size: 2.4rem; }
+  .cta-section p { font-size: 1.05rem; }
+  .cta-btn { padding: 0.8rem 3.5rem; font-size: 1rem; }
+}
+@media (max-width: 576px) {
+  .cta-title { font-size: 1.9rem; }
+  .cta-section p { font-size: 0.95rem; }
+  .cta-btn { padding: 0.7rem 2.8rem; font-size: 0.95rem; }
+}
+</style>
+
+
+
+
+
+
+
+
+
+
+<!-- Kontak Modern GOPAN (Disempurnakan Profesional) -->
+<section id="kontak" class="contact-section py-5" style="background: linear-gradient(135deg, #fdfbfb, #ebedee);">
+  <div class="container">
+    <!-- Judul Section -->
+    <div class="text-center mb-5 fade-in-up">
+      <h2 class="section-title fw-bold display-6 text-primary">
+        Hubungi <span class="text-warning">GOPAN</span>
+      </h2>
+
+      <p class="text-muted fs-5">
+        <strong>Garda Organisasi Peternak Ayam Nasional</strong> siap membantu Anda 
+        membangun industri peternakan ayam yang modern, efisien, dan transparan.
+      </p>
+    </div>
+
+    <div class="row justify-content-center">
+      <div class="col-12 col-md-8 col-lg-6">
+        <div class="contact-card p-5 shadow-lg rounded-4 bg-white position-relative overflow-hidden fade-in-up" style="animation-delay:0.2s;">
+          <!-- Background dekoratif -->
+          <div class="circle-contact circle-1"></div>
+          <div class="circle-contact circle-2"></div>
+
+          <!-- Notifikasi -->
+          <?php if($this->session->flashdata('success')): ?>
+          <div class="alert alert-success alert-dismissible fade show" role="alert">
+            <?php echo $this->session->flashdata('success'); ?>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+          </div>
+          <?php elseif($this->session->flashdata('error')): ?>
+          <div class="alert alert-danger alert-dismissible fade show" role="alert">
+            <?php echo $this->session->flashdata('error'); ?>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+          </div>
+          <?php endif; ?>
+
+          <!-- Form Kontak -->
+          <form action="<?php echo base_url('index.php/kontak/submit'); ?>" method="post">
+            <!-- Input Nama -->
+            <div class="mb-4 position-relative">
+              <i class="bi bi-person-fill input-icon text-warning"></i>
+              <input type="text" name="nama" class="form-control form-control-lg ps-5" placeholder="Nama Lengkap" required>
+            </div>
+            <!-- Input Email -->
+            <div class="mb-4 position-relative">
+              <i class="bi bi-envelope-fill input-icon text-warning"></i>
+              <input type="email" name="email" class="form-control form-control-lg ps-5" placeholder="Email" required>
+            </div>
+            <!-- Input Pesan -->
+            <div class="mb-4 position-relative">
+              <i class="bi bi-chat-dots-fill input-icon text-warning"></i>
+              <textarea name="pesan" class="form-control form-control-lg ps-5" rows="5" placeholder="Pesan Anda untuk GOPAN" required></textarea>
+            </div>
+            <!-- Tombol -->
+            <button type="submit" class="btn btn-gopan w-100 btn-lg shadow-sm">
+              <i class="bi bi-send-fill me-2"></i> Kirim Pesan ke GOPAN
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CSS Modern Kontak -->
+<style>
+/* Animasi fade-in */
+.fade-in-up {
+  opacity: 0;
+  transform: translateY(25px);
+  animation: fadeUp 0.9s forwards;
+}
+@keyframes fadeUp {
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Title Underline */
+.title-underline {
+  width: 70px;
+  height: 4px;
+  background: linear-gradient(90deg, #ffdd00, #ffb300);
+  border-radius: 3px;
+}
+
+/* Contact Card */
+.contact-card {
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+.contact-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 25px 50px rgba(255,215,0,0.25);
+}
+
+/* Input & Textarea */
+.contact-section input,
+.contact-section textarea {
+  border-radius: 14px;
+  border: 1px solid #ddd;
+  background: #fff;
+  transition: all 0.3s ease;
+}
+.contact-section input:focus,
+.contact-section textarea:focus {
+  border-color: #ffc107;
+  box-shadow: 0 0 12px rgba(255,215,0,0.4);
+  outline: none;
+}
+
+/* Ikon input */
+.input-icon {
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  transform: translateY(-50%);
+  font-size: 1.2rem;
+  pointer-events: none;
+}
+
+/* Tombol Gradient */
+.btn-gopan {
+  background: linear-gradient(45deg, #ffd700, #ffb300);
+  color: #1b2a6f;
+  font-weight: 700;
+  border-radius: 50px;
+  letter-spacing: 0.5px;
+  transition: all 0.35s ease;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+  position: relative;
+  overflow: hidden;
+}
+.btn-gopan:hover {
+  background: linear-gradient(45deg, #ffb300, #ffd700);
+  transform: scale(1.05);
+  box-shadow: 0 0 25px rgba(255,215,0,0.7);
+}
+
+/* Background Circle */
+.circle-contact {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255,215,0,0.15);
+  backdrop-filter: blur(3px);
+  animation: floatCircleContact 6s ease-in-out infinite alternate;
+}
+.circle-1 {
+  width: 180px; height: 180px;
+  top: -50px; right: -50px;
+}
+.circle-2 {
+  width: 140px; height: 140px;
+  bottom: -40px; left: -40px;
+  animation-delay: 3s;
+}
+@keyframes floatCircleContact {
+  0%, 100% { transform: translateY(0) translateX(0); }
+  50% { transform: translateY(-15px) translateX(15px); }
+}
+
+/* Scroll-to-Top Button */
+#scrollTopBtn {
+  display: none;
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  z-index: 1050;
+  background: linear-gradient(135deg, #007bff, #0056b3);
+  color: white;
+  border: none;
+  width: 48px; height: 48px;
+  border-radius: 50%;
+  font-size: 22px;
+  cursor: pointer;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
+  opacity: 0.85;
+}
+#scrollTopBtn:hover {
+  background: linear-gradient(135deg, #0056b3, #003f7f);
+  transform: scale(1.12);
+  opacity: 1;
+}
+</style>
+
+
+
+
+
+<!-- Tombol Scroll ke Atas -->
+<button id="scrollTopBtn" title="Ke Atas">
+  <i class="bi bi-arrow-up"></i>
+</button>
+
+<style>
+#scrollTopBtn {
+  position: fixed;
+  bottom: 20px; /* Jarak dari bawah */
+  right: 20px;  /* Jarak dari kanan */
+  z-index: 9999;
+  display: none;
+  background: rgba(255, 215, 0, 0.85); /* Semi-transparan */
+  color: #1b2a6f;
+  border: none;
+  border-radius: 50%;
+  width: 40px;  /* Ukuran lebih kecil */
+  height: 40px; /* Ukuran lebih kecil */
+  font-size: 1.1rem;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
+}
+#scrollTopBtn:hover {
+  transform: scale(1.15);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.3);
+  background: rgba(255, 215, 0, 1);
+}
+</style>
+
+<script>
+// Scroll-to-top logic
+const scrollTopBtn = document.getElementById("scrollTopBtn");
+window.addEventListener("scroll", () => {
+  scrollTopBtn.style.display = window.scrollY > 300 ? "block" : "none";
+});
+
+scrollTopBtn.addEventListener("click", () => {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+});
+</script>
+
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+
+<!-- Footer Modern GOPAN (Final Profesional) -->
+<footer class="footer-modern text-light pt-5">
+  <div class="container">
+    <div class="row gy-4 align-items-start">
+      
+      <!-- Brand / Deskripsi -->
+      <div class="col-lg-4 col-md-6 text-center text-md-start">
+        <h5 class="fw-bold text-warning mb-3">GOPAN</h5>
+        <p class="small text-light opacity-75 pe-lg-3">
+          <strong>Garda Organisasi Peternak Ayam Nasional</strong> — wadah perjuangan, persatuan, dan solusi digital 
+          bagi para peternak ayam Indonesia untuk membangun industri yang modern, efisien, dan transparan.
+        </p>
+      </div>
+
+      <!-- Navigasi -->
+      <div class="col-lg-4 col-md-6 text-center">
+        <h6 class="fw-bold mb-3 text-warning">Navigasi</h6>
+        <ul class="list-unstyled mb-0">
+          <li class="mb-2"><a href="#tentang" class="footer-link">Tentang GOPAN</a></li>
+          <li class="mb-2"><a href="#layanan" class="footer-link">Layanan</a></li>
+          <li class="mb-2"><a href="#faq" class="footer-link">FAQ</a></li>
+          <li><a href="#kontak" class="footer-link">Kontak</a></li>
+        </ul>
+      </div>
+
+      <!-- Kontak & Sosial -->
+      <div class="col-lg-4 col-md-12 text-center text-md-end">
+        <h6 class="fw-bold mb-3 text-warning">Kontak & Sosial</h6>
+        <ul class="list-unstyled small opacity-85 mb-3">
+          <li class="mb-2"><i class="bi bi-geo-alt-fill me-2 text-warning"></i> Denpasar, Bali - Indonesia</li>
+          <li class="mb-2"><i class="bi bi-telephone-fill me-2 text-warning"></i> +62 812-3456-7890</li>
+          <li><i class="bi bi-envelope-fill me-2 text-warning"></i> info@gopan.or.id</li>
+        </ul>
+        
+        <!-- Ikon Sosial -->
+        <div class="social-links justify-content-md-end justify-content-center">
+          <a href="#" class="social-icon"><i class="bi bi-facebook"></i></a>
+          <a href="#" class="social-icon"><i class="bi bi-instagram"></i></a>
+          <a href="#" class="social-icon"><i class="bi bi-twitter-x"></i></a>
+          <a href="#" class="social-icon"><i class="bi bi-youtube"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Garis -->
+    <hr class="border-light my-4 opacity-25">
+
+    <!-- Hak Cipta -->
+    <div class="row">
+      <div class="col text-center">
+        <p class="mb-0 small text-light opacity-75">
+          &copy; <?php echo date('Y'); ?> <strong>GOPAN</strong>. Semua Hak Dilindungi.
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- CSS Footer Modern -->
+<style>
+.footer-modern {
+  background: linear-gradient(135deg, #1b1b1b, #0d0d0d);
+  font-family: 'Poppins', sans-serif;
+  color: #eee;
+  position: relative;
+  z-index: 1;
+}
+
+.footer-modern h5,
+.footer-modern h6 {
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.footer-modern p,
+.footer-modern li {
+  line-height: 1.6;
+}
+
+/* Link Navigasi */
+.footer-link {
+  color: #bbb;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+.footer-link:hover {
+  color: #ffd700;
+  transform: translateX(4px);
+}
+
+/* Sosial Media */
+.social-links {
+  display: flex;
+  gap: 12px;
+  margin-top: 0.5rem;
+}
+.social-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: rgba(255,215,0,0.08);
+  color: #ffd700;
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+}
+.social-icon:hover {
+  background: #ffd700;
+  color: #1b1b1b;
+  transform: scale(1.12);
+  box-shadow: 0 0 18px rgba(255,215,0,0.45);
+}
+
+/* Garis */
+.footer-modern hr {
+  border-color: rgba(255,255,255,0.15);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .footer-modern .text-md-start,
+  .footer-modern .text-md-end {
+    text-align: center !important;
+  }
+  .social-links {
+    justify-content: center !important;
+  }
+}
+</style>
